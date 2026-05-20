@@ -531,11 +531,249 @@
     gap: 20px;
   }
   .programs.single {
-    grid-template-columns: minmax(300px, 420px);
-    justify-content: center;
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
   }
   .programs.three {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ════════════ FEATURED 1+2 CARD ════════════ */
+  .featured-card {
+    display: block;
+    background: linear-gradient(135deg, #fff 0%, #fefcf4 100%);
+    border: 2px solid var(--gold);
+    border-radius: 24px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(10, 37, 64, 0.10);
+    transition: transform 0.35s, box-shadow 0.35s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .featured-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-lt) 50%, var(--gold) 100%);
+  }
+  .featured-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(201, 168, 76, 0.25);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--navy);
+    color: var(--gold-lt);
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(10, 37, 64, 0.25);
+  }
+  .featured-badge svg { color: var(--gold); }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  /* Left side: visual */
+  .featured-left {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 60px 48px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .featured-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(201, 168, 76, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+
+  .featured-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -4px;
+    color: #fff;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .fn-one {
+    /* Make the "1" distinct, NOT look like "I" */
+    color: var(--gold-lt);
+    font-style: italic;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    padding-right: 0;
+    transform: translateY(-2px);
+  }
+  .fn-one::after {
+    /* serif base flourish so "1" reads as a number, not Roman I */
+    content: '';
+    position: absolute;
+    left: -14px; right: -14px;
+    bottom: -2px;
+    height: 4px;
+    background: var(--gold-lt);
+    border-radius: 2px;
+  }
+  .fn-plus {
+    font-size: 80px;
+    color: #fff;
+    margin: 0 6px;
+    opacity: 0.5;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .fn-two {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .featured-formula {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ff-one, .ff-two {
+    font-size: 13px;
+    color: #b8c5d8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .ff-one { color: var(--gold-lt); }
+  .ff-plus {
+    color: rgba(255,255,255,0.3);
+    font-size: 16px;
+  }
+
+  .featured-tagline {
+    position: relative;
+    z-index: 1;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--gold-lt);
+    margin-top: 8px;
+  }
+
+  /* Right side: info */
+  .featured-right {
+    padding: 50px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featured-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+  .featured-title .italic {
+    font-style: italic;
+    color: var(--gold-dk);
+  }
+  .featured-desc {
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .featured-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .fs-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .fs-icon {
+    width: 38px; height: 38px;
+    background: var(--gold-bg);
+    color: var(--gold-dk);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .fs-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+  .fs-lbl {
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .featured-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+    box-shadow: 0 6px 16px rgba(201, 168, 76, 0.3);
+  }
+  .featured-card:hover .featured-cta {
+    background: var(--gold-lt);
+    transform: translateX(4px);
   }
   .program-card {
     background: #fff;
@@ -1019,7 +1257,13 @@
     .hero-title { font-size: 56px; }
     .hero-content { grid-template-columns: 1fr; }
     .programs { grid-template-columns: repeat(2, 1fr); }
+    .programs.three { grid-template-columns: repeat(2, 1fr); }
     .programs.english { grid-template-columns: repeat(2, 1fr); }
+    .featured-grid { grid-template-columns: 1fr; }
+    .featured-left { padding: 48px 32px; }
+    .featured-right { padding: 40px 32px; }
+    .featured-number { font-size: 110px; }
+    .featured-stats { grid-template-columns: 1fr; }
     .banner { flex-direction: column; text-align: center; }
     .testimonials, .blog-grid, .why-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1031,7 +1275,15 @@
     .hero { padding: 60px 0 80px; }
     .hero-title { font-size: 40px; letter-spacing: -1px; }
     .stat-n { font-size: 40px; }
-    .programs, .programs.english { grid-template-columns: 1fr; }
+    .programs, .programs.english, .programs.three { grid-template-columns: 1fr; }
+    .featured-badge {
+      top: 14px; right: 14px;
+      font-size: 9px;
+      padding: 5px 10px;
+    }
+    .featured-number { font-size: 88px; }
+    .fn-plus { font-size: 56px; }
+    .featured-title { font-size: 24px; }
     .footer-grid { grid-template-columns: 1fr; }
     .section { padding: 60px 0; }
   }
@@ -1163,23 +1415,79 @@
       </div>
 
       <div class="programs single">
+      <a href="1plus2.html" class="featured-card">
+        <div class="featured-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Pathway хөтөлбөр
+        </div>
 
-        <a href="1plus2.html" class="program-card">
-          <div class="pc-head">
-            <div class="pc-head-art">★</div>
-            <div class="pc-tag">Шинэ хөтөлбөр · Бакалавр</div>
-            <div class="pc-title">1+2</div>
-            <div class="pc-sub">Бакалаврын хөтөлбөр<br>UK · Australia</div>
+        <div class="featured-grid">
+          <!-- LEFT: Visual side -->
+          <div class="featured-left">
+            <div class="featured-number">
+              <span class="fn-one">1</span><span class="fn-plus">+</span><span class="fn-two">2</span>
+            </div>
+            <div class="featured-formula">
+              <span class="ff-one">1 жил Монгол</span>
+              <span class="ff-plus">+</span>
+              <span class="ff-two">2 жил гадаад</span>
+            </div>
+            <div class="featured-tagline">Start locally, graduate globally.</div>
           </div>
-          <div class="pc-body">
-            <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">3 жил</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Зэрэг</span><span class="pc-stat-val">Bachelor</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Хэмнэлт</span><span class="pc-stat-val">141 сая ₮ хүртэл</span></div>
+
+          <!-- RIGHT: Info side -->
+          <div class="featured-right">
+            <div class="featured-title">Гадаадын нэр хүндтэй <span class="italic">бакалаврын зэрэг</span></div>
+            <div class="featured-desc">
+              Эх орондоо 1 жил суралцаад Их Британи, Австралийн нэр хүндтэй их сургуулийн 2-р курс рүү шууд ороорой. Цаг хугацаа, зардал хэмнэх ухаалаг шийдэл.
+            </div>
+
+            <div class="featured-stats">
+              <div class="fs-item">
+                <div class="fs-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                </div>
+                <div class="fs-text">
+                  <div class="fs-val">3 жил</div>
+                  <div class="fs-lbl">Сурах хугацаа</div>
+                </div>
+              </div>
+              <div class="fs-item">
+                <div class="fs-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div class="fs-text">
+                  <div class="fs-val">Bachelor</div>
+                  <div class="fs-lbl">Олон улсын зэрэг</div>
+                </div>
+              </div>
+              <div class="fs-item">
+                <div class="fs-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                </div>
+                <div class="fs-text">
+                  <div class="fs-val">141 сая ₮</div>
+                  <div class="fs-lbl">Хүртэл хэмнэлт</div>
+                </div>
+              </div>
+              <div class="fs-item">
+                <div class="fs-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+                </div>
+                <div class="fs-text">
+                  <div class="fs-val">UK · AU</div>
+                  <div class="fs-lbl">4 партнер их сургууль</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="featured-cta">
+              Дэлгэрэнгүй мэдээлэл
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
           </div>
-          <div class="pc-foot">
-            <span class="pc-link">Дэлгэрэнгүй мэдээлэл →</span>
-          </div>
-        </a>
+        </div>
+      </a>
 
       </div>
     </div>
@@ -1205,7 +1513,7 @@
           </div>
           <div class="pc-body">
             <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">2.5–3.5 жил</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">13 хэсэг</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">13</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Олон улс</span><span class="pc-stat-val">180+ улс</span></div>
           </div>
           <div class="pc-foot">
@@ -1222,7 +1530,7 @@
           </div>
           <div class="pc-body">
             <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">12 сар</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">2 хэсэг</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">2</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Карьер</span><span class="pc-stat-val">CFO бэлтгэх</span></div>
           </div>
           <div class="pc-foot">
@@ -1239,7 +1547,7 @@
           </div>
           <div class="pc-body">
             <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">2 жил</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">3+1 хэсэг</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">3+1</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Карьер</span><span class="pc-stat-val">Big 4</span></div>
           </div>
           <div class="pc-foot">
