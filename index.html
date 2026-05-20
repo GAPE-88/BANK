@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GAPE Academy — Олон улсын мэргэжлийн боловсрол</title>
-  <meta name="description" content="GAPE Academy — Олон улсын мэргэжлийн боловсрол. ACCA, USCPA, CMA цолны хөтөлбөр, 1+2 Бакалаврын хөтөлбөр Их Британи, Австралид. 2016 оноос үйл ажиллагаа явуулж байна.">
-  <meta name="keywords" content="GAPE, ACCA, CMA, USCPA, 1+2 хөтөлбөр, Бакалавр, Их Британи, Австрали, олон улсын боловсрол, Монгол">
+  <meta name="description" content="GAPE Academy — Олон улсын мэргэжлийн боловсрол. ACCA, CPA, CMA цолны хөтөлбөр, 1+2 Бакалаврын хөтөлбөр Их Британи, Австралид. 2016 оноос үйл ажиллагаа явуулж байна.">
+  <meta name="keywords" content="GAPE, ACCA, CMA, CPA, 1+2 хөтөлбөр, Бакалавр, Их Британи, Австрали, олон улсын боловсрол, Монгол">
   <meta name="author" content="GAPE Academy">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="GAPE Academy — Олон улсын мэргэжлийн боловсрол">
-  <meta property="og:description" content="Олон улсын мэргэжлийн боловсрол · ACCA · USCPA · CMA · 1+2 Бакалавр">
+  <meta property="og:description" content="Олон улсын мэргэжлийн боловсрол · ACCA · CPA · CMA · 1+2 Бакалавр">
   <meta property="og:image" content="assets/logo.png">
   <meta property="og:url" content="https://www.gape.education">
 
@@ -529,6 +529,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+  }
+  .programs.single {
+    grid-template-columns: minmax(300px, 420px);
+    justify-content: center;
+  }
+  .programs.three {
+    grid-template-columns: repeat(3, 1fr);
   }
   .program-card {
     background: #fff;
@@ -1065,7 +1072,7 @@
           замналаа эндээс
         </h1>
         <p class="hero-sub">
-          GAPE Academy нь <strong>ACCA Gold Approved Learning Partner</strong>, <strong>IMA Silver Course Provider</strong>, <strong>Becker-ийн албан ёсны түнш</strong> юм. 2016 оноос хойш 500+ суралцагчийг дэлхий нийтэд хүлээн зөвшөөрөгдсөн цолтой болоход тусалсан.
+          GAPE Academy нь <strong>ACCA Gold Approved Learning Partner</strong>, <strong>IMA Silver Course Provider</strong>, <strong>Becker-ийн албан ёсны түнш</strong> юм. 2016 оноос хойш <strong>500+ суралцагчдад</strong> дэлхийд хүлээн зөвшөөрөгдсөн цолтой болоход туслаж байна.
         </p>
         <div class="hero-buttons">
           <a href="#programs" class="btn btn-primary">
@@ -1141,38 +1148,53 @@
       <div class="section-tag">Хөтөлбөрүүд</div>
       <h2 class="section-title">Өөрт тохирох <span class="italic">замналаа</span> сонгоорой</h2>
       <p class="section-sub">
-        Олон улсын мэргэжлийн цолноос Бакалаврын зэрэг, Англи хэлний бэлтгэл хүртэл — таны карьерт хэрэгтэй бүх хөтөлбөр нэг дор.
+        Англи хэлний бэлтгэлээс гадаадад бакалаврын зэрэг эзэмших, эх орондоо олон улсын цолтой болох хүртэл — таны карьерт хэрэгтэй бүх хөтөлбөр нэг дор.
       </p>
     </div>
 
-    <!-- Category 1: Мэргэжлийн цол -->
+    <!-- Category 1: 1+2 Bachelor -->
     <div class="category">
       <div class="category-header">
         <div class="category-num">01</div>
         <div>
-          <div class="category-title">Олон улсын мэргэжлийн цол</div>
-          <div class="category-sub">Дэлхийд хүлээн зөвшөөрөгдсөн санхүүгийн мэргэшил</div>
+          <div class="category-title">Гадаадын нэр хүндтэй бакалаврын зэрэг</div>
+          <div class="category-sub">Их Британи, Австралид суралцаж олон улсын бакалавр болох</div>
         </div>
       </div>
 
-      <div class="programs">
+      <div class="programs single">
 
         <a href="1plus2.html" class="program-card">
           <div class="pc-head">
             <div class="pc-head-art">★</div>
-            <div class="pc-tag">Pathway хөтөлбөр</div>
+            <div class="pc-tag">Шинэ хөтөлбөр · Бакалавр</div>
             <div class="pc-title">1+2</div>
-            <div class="pc-sub">Бакалаврын хөтөлбөр<br>Foundation degree</div>
+            <div class="pc-sub">Бакалаврын хөтөлбөр<br>UK · Australia</div>
           </div>
           <div class="pc-body">
             <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">3 жил</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Зэрэг</span><span class="pc-stat-val">Bachelor</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Хэл</span><span class="pc-stat-val">Англи</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Хэмнэлт</span><span class="pc-stat-val">141 сая ₮ хүртэл</span></div>
           </div>
           <div class="pc-foot">
             <span class="pc-link">Дэлгэрэнгүй мэдээлэл →</span>
           </div>
         </a>
+
+      </div>
+    </div>
+
+    <!-- Category 2: International certifications -->
+    <div class="category">
+      <div class="category-header">
+        <div class="category-num">02</div>
+        <div>
+          <div class="category-title">Олон улсад хүлээн зөвшөөрөгдсөн санхүүгийн мэргэшил</div>
+          <div class="category-sub">ACCA · CMA · CPA — дэлхийн стандартын цолны хөтөлбөрүүд</div>
+        </div>
+      </div>
+
+      <div class="programs three">
 
         <div class="program-card">
           <div class="pc-head">
@@ -1182,26 +1204,9 @@
             <div class="pc-sub">Association of Chartered<br>Certified Accountants</div>
           </div>
           <div class="pc-body">
-            <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">2–3 жил</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val"8-13 шалгалт</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">2.5–3.5 жил</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">13 хэсэг</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Олон улс</span><span class="pc-stat-val">180+ улс</span></div>
-          </div>
-          <div class="pc-foot">
-            <span class="pc-link">Дэлгэрэнгүй мэдээлэл →</span>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <div class="pc-head">
-            <div class="pc-head-art">U</div>
-            <div class="pc-tag">Цол · USA</div>
-            <div class="pc-title">USCPA</div>
-            <div class="pc-sub">US Certified<br>Public Accountant</div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">2 жил</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">3+1 шалгалт</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Карьер</span><span class="pc-stat-val">Big 4</span></div>
           </div>
           <div class="pc-foot">
             <span class="pc-link">Дэлгэрэнгүй мэдээлэл →</span>
@@ -1217,7 +1222,7 @@
           </div>
           <div class="pc-body">
             <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">12 сар</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">2 шалгалт</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">2 хэсэг</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Карьер</span><span class="pc-stat-val">CFO бэлтгэх</span></div>
           </div>
           <div class="pc-foot">
@@ -1225,16 +1230,33 @@
           </div>
         </a>
 
+        <div class="program-card">
+          <div class="pc-head">
+            <div class="pc-head-art">U</div>
+            <div class="pc-tag">Цол · USA</div>
+            <div class="pc-title">CPA</div>
+            <div class="pc-sub">US Certified<br>Public Accountant</div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">2 жил</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Шалгалт</span><span class="pc-stat-val">3+1 хэсэг</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Карьер</span><span class="pc-stat-val">Big 4</span></div>
+          </div>
+          <div class="pc-foot">
+            <span class="pc-link">Дэлгэрэнгүй мэдээлэл →</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- Category 2: English -->
+    <!-- Category 3: English -->
     <div class="category" id="english">
       <div class="category-header">
-        <div class="category-num">02</div>
+        <div class="category-num">03</div>
         <div>
           <div class="category-title">Англи хэлний сургалт</div>
-          <div class="category-sub">Олон улсад суралцах, ажиллахад зайлшгүй шаардлагатай</div>
+          <div class="category-sub">Intensive IELTS · General English · Business English</div>
         </div>
       </div>
 
@@ -1243,13 +1265,13 @@
         <div class="program-card">
           <div class="pc-head">
             <div class="pc-head-art">I</div>
-            <div class="pc-tag">Шалгалт · UK/AU</div>
+            <div class="pc-tag">Intensive · Англи хэл</div>
             <div class="pc-title">IELTS</div>
-            <div class="pc-sub">Academic & General<br>Training</div>
+            <div class="pc-sub">Intensive IELTS<br>сургалт</div>
           </div>
           <div class="pc-body">
             <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">8 долоо хоног</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Бүлэг</span><span class="pc-stat-val">15-20 хүн</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Анги дүүргэлт</span><span class="pc-stat-val">15–20 хүн</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Зорилго</span><span class="pc-stat-val">6.5+ оноо</span></div>
           </div>
           <div class="pc-foot">
@@ -1259,15 +1281,15 @@
 
         <div class="program-card">
           <div class="pc-head">
-            <div class="pc-head-art">T</div>
-            <div class="pc-tag">Шалгалт · USA</div>
-            <div class="pc-title">TOEFL</div>
-            <div class="pc-sub">Test of English as a<br>Foreign Language</div>
+            <div class="pc-head-art">G</div>
+            <div class="pc-tag">Intensive · Англи хэл</div>
+            <div class="pc-title">General</div>
+            <div class="pc-sub">Intensive General<br>English сургалт</div>
           </div>
           <div class="pc-body">
-            <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">8 долоо хоног</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Бүлэг</span><span class="pc-stat-val">15-20 хүн</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Зорилго</span><span class="pc-stat-val">80+ оноо</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">9 долоо хоног</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Анги дүүргэлт</span><span class="pc-stat-val">15–20 хүн</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Түвшин</span><span class="pc-stat-val">Бүх түвшин</span></div>
           </div>
           <div class="pc-foot">
             <span class="pc-link">Дэлгэрэнгүй мэдээлэл →</span>
@@ -1279,11 +1301,11 @@
             <div class="pc-head-art">B</div>
             <div class="pc-tag">Профессионал</div>
             <div class="pc-title">Business</div>
-            <div class="pc-sub">Бизнесийн<br>англи хэл</div>
+            <div class="pc-sub">Business English<br>сургалт</div>
           </div>
           <div class="pc-body">
             <div class="pc-stat"><span class="pc-stat-label">Хугацаа</span><span class="pc-stat-val">2–3 сар</span></div>
-            <div class="pc-stat"><span class="pc-stat-label">Бүлэг</span><span class="pc-stat-val">8-12 хүн</span></div>
+            <div class="pc-stat"><span class="pc-stat-label">Бүлэг</span><span class="pc-stat-val">6–8 хүн</span></div>
             <div class="pc-stat"><span class="pc-stat-label">Чиглэл</span><span class="pc-stat-val">Ажилтан</span></div>
           </div>
           <div class="pc-foot">
@@ -1305,7 +1327,7 @@
       <div class="section-tag">Яагаад GAPE</div>
       <h2 class="section-title">Дэлхийн <span class="italic">стандартын</span> боловсрол<br>Монголд хүрсэн</h2>
       <p class="section-sub">
-        Бид зөвхөн сургалт хийдэггүй — олон улсын мэргэжлийн байгууллагуудын албан ёсны түншээр ажилладаг.
+        Бид зөвхөн сургалт хийдэггүй — олон улсын мэргэжлийн байгууллагуудын албан ёсны түнш хэлбэрээр ажилладаг.
       </p>
     </div>
 
@@ -1330,7 +1352,7 @@
           </svg>
         </div>
         <h3 class="why-title">Мэргэшсэн багш нар</h3>
-        <p class="why-desc">Бүх багш нар нь олон улсын цолтой, практик ажлын туршлагатай, топ компаниудад ажилласан туршлагатай мэргэжилтнүүд.</p>
+        <p class="why-desc">Бүх багш нар нь олон улсын цолтой, практик ажлын туршлагатай, гадны топ компанид ажилласан туршлагатай мэргэжилтнүүд.</p>
       </div>
 
       <div class="why-card">
@@ -1357,6 +1379,7 @@
       <div class="partner">ACCA<span>Gold</span></div>
       <div class="partner">IMA<span>Silver</span></div>
       <div class="partner">Becker<span>+</span></div>
+      <div class="partner">AICPA<span>Member</span></div>
     </div>
   </div>
 </section>
@@ -1387,13 +1410,13 @@
 
       <div class="testimonial">
         <p class="testimonial-quote">
-          "CРA хөтөлбөрийг төгсөөд олон улсын байгууллагад урилгаар ажиллаж эхэлсэн. Үнэхээр зөв сонголт байсан."
+          "CPA хөтөлбөрийг төгсөөд олон улсын байгууллагад урилгаар ажиллаж эхэлсэн. Үнэхээр зөв сонголт байсан."
         </p>
         <div class="testimonial-author">
           <div class="ta-avatar">ТМ</div>
           <div class="ta-info">
             <div class="ta-name">Т. Мөнхзул</div>
-            <div class="ta-role">CРА төгсөгч · Finance Manager</div>
+            <div class="ta-role">CPA төгсөгч · Finance Manager</div>
           </div>
         </div>
       </div>
@@ -1518,9 +1541,9 @@
         <ul>
           <li><a href="1plus2.html">1+2 Бакалавр</a></li>
           <li><a href="#">ACCA</a></li>
-          <li><a href="#">USCPA</a></li>
           <li><a href="cma.html">CMA</a></li>
-          <li><a href="#">IELTS / TOEFL</a></li>
+          <li><a href="#">CPA</a></li>
+          <li><a href="#">IELTS · General · Business</a></li>
         </ul>
       </div>
 
