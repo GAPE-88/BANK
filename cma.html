@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CMA® Олон улсын сертификат — GAPE Academy</title>
+<meta name="description" content="CMA® (Certified Management Accountant) — олон улсын мэргэшсэн удирдлагын нягтлан бодогчийн сертификат. Becker+ ба IMA Silver Course Provider GAPE Academy дээр сурах боломж.">
+<meta name="keywords" content="CMA, Certified Management Accountant, GAPE, нягтлан бодогч, олон улсын цол, Becker, IMA">
+<meta property="og:title" content="CMA® Олон улсын сертификат — GAPE Academy">
+<meta property="og:description" content="Эх орондоо суралцаж, санхүүгийн карьераа дараагийн түвшинд хүргэе">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0a2540;
+    --navy-2: #142339;
+    --navy-3: #1d4373;
+    --gold: #c9a84c;
+    --gold-lt: #e8c96e;
+    --gold-dk: #a8861f;
+    --gold-bg: #fdf6e3;
+    --blue: #2E75B6;
+    --blue-lt: #5B9BD5;
+    --blue-bg: #deeaf1;
+    --green: #4a8b3a;
+    --green-bg: #e8f3e2;
+    --purple: #6b4a8b;
+    --purple-bg: #ede5f5;
+    --orange: #d97706;
+    --bg: #ffffff;
+    --bg2: #f5f7fa;
+    --bg3: #eef1f8;
+    --border: #e4e8f1;
+    --text1: #0a2540;
+    --text2: #4a5878;
+    --text3: #8fa3c0;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text1);
+    line-height: 1.6;
+    background: var(--bg);
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+  .nav-logo-full {
+    height: 44px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+  }
+  .nav-menu {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-menu a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text1);
+  }
+  .nav-menu a:hover { color: var(--gold-dk); }
+  .nav-menu a.active { color: var(--gold-dk); font-weight: 600; }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .nav-cta:hover { background: var(--gold-lt); }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    background: var(--bg2);
+    padding: 14px 0;
+    font-size: 13px;
+    color: var(--text2);
+  }
+  .breadcrumb a { color: var(--text2); }
+  .breadcrumb a:hover { color: var(--gold-dk); }
+  .breadcrumb .sep { margin: 0 10px; color: var(--text3); }
+  .breadcrumb .current { color: var(--navy); font-weight: 500; }
+
+  /* HERO */
+  .hero {
+    background:
+      radial-gradient(circle at 85% 20%, rgba(201,168,76,.2) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(46,117,182,.12) 0%, transparent 45%),
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 80px 0 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold));
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    color: var(--gold-lt);
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+  }
+  .hero-title .gold { color: var(--gold-lt); font-style: italic; }
+  .hero-tag {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: var(--gold-lt);
+    margin-bottom: 12px;
+  }
+  .hero-sub {
+    font-size: 19px;
+    color: #b8c5d8;
+    line-height: 1.65;
+    margin: 0 auto 28px;
+    max-width: 700px;
+    font-weight: 300;
+  }
+  .hero-sub strong { color: #fff; font-weight: 500; }
+
+  .partner-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 16px;
+    padding: 14px 32px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+  }
+  .partner-row .label {
+    font-size: 10px;
+    color: #8fa3c0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .partner-row .partner {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  .partner-row .partner span {
+    font-family: 'Inter';
+    font-size: 10px;
+    color: var(--gold-lt);
+    letter-spacing: 1.5px;
+    margin-left: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* STATS */
+  .stats {
+    background: #fff;
+    padding: 50px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .stat {
+    text-align: center;
+    padding: 16px;
+    position: relative;
+  }
+  .stat + .stat::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    bottom: 20%;
+    width: 1px;
+    background: var(--border);
+  }
+  .stat-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .stat-n .small { font-size: 24px; color: var(--gold-dk); }
+  .stat-l {
+    font-size: 12px;
+    color: var(--text2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* SECTION */
+  .section { padding: 90px 0; }
+  .section-paper { background: var(--bg2); }
+  .section-navy { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
+  .section-navy .section-title { color: #fff; }
+  .section-navy .section-sub { color: #b8c5d8; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .section-tag::before, .section-tag::after {
+    content: '◆';
+    margin: 0 12px;
+    color: var(--gold);
+  }
+  .section-navy .section-tag { color: var(--gold-lt); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .section-title .italic {
+    font-style: italic;
+    color: var(--gold-dk);
+  }
+  .section-navy .section-title .italic { color: var(--gold-lt); }
+  .section-sub {
+    font-size: 17px;
+    color: var(--text2);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* WHY 4 REASONS (top features) */
+  .whys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .why {
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 24px 32px;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .why:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.1);
+    border-color: var(--gold);
+  }
+  .why-ico {
+    width: 64px; height: 64px;
+    margin: 0 auto 18px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: var(--gold-lt);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(10, 37, 64, 0.15);
+  }
+  .why-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .why-desc {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.55;
+  }
+
+  /* CURRICULUM (3 phase) */
+  .curriculum {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    position: relative;
+  }
+  .curriculum::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 16%;
+    right: 16%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--gold) 0 8px, transparent 8px 16px);
+    z-index: 0;
+  }
+  .cur-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px 28px;
+    border: 1.5px solid var(--border);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  .cur-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.1);
+    border-color: var(--gold);
+  }
+  .cur-num {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(10, 37, 64, 0.18);
+  }
+  .cur-card:nth-child(1) .cur-num { background: linear-gradient(135deg, var(--green) 0%, #5fa848 100%); }
+  .cur-card:nth-child(2) .cur-num { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 100%); }
+  .cur-card:nth-child(3) .cur-num { background: linear-gradient(135deg, var(--purple) 0%, #8b6cae 100%); }
+
+  .cur-roman {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold-dk);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .cur-date {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .cur-duration {
+    text-align: center;
+    display: inline-block;
+    font-size: 11px;
+    background: var(--gold-bg);
+    color: var(--gold-dk);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin: 0 auto 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .cur-duration-wrapper {
+    text-align: center;
+    margin-bottom: 22px;
+  }
+  .cur-list {
+    list-style: none;
+  }
+  .cur-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--text1);
+    line-height: 1.5;
+  }
+  .cur-list li svg { flex-shrink: 0; margin-top: 3px; }
+  .cur-card:nth-child(1) .cur-list li svg { color: var(--green); }
+  .cur-card:nth-child(2) .cur-list li svg { color: var(--blue); }
+  .cur-card:nth-child(3) .cur-list li svg { color: var(--purple); }
+  .cur-list li strong { color: var(--navy); font-weight: 600; }
+
+  /* SCHEDULE info */
+  .schedule {
+    background: linear-gradient(135deg, #fff 0%, var(--gold-bg) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 24px;
+    padding: 40px 48px;
+    max-width: 900px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .schedule-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .schedule-title .italic { font-style: italic; color: var(--gold-dk); }
+  .schedule-desc {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 4px;
+  }
+  .schedule-times {
+    display: grid;
+    gap: 14px;
+  }
+  .sch-time {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 12px;
+    border-left: 4px solid var(--gold);
+  }
+  .sch-icon {
+    width: 36px; height: 36px;
+    background: var(--navy);
+    color: var(--gold-lt);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .sch-day {
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 15px;
+  }
+  .sch-hour {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 2px;
+  }
+
+  /* SKILLS GRID (10 areas from brochure) */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  .skill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 22px 16px;
+    text-align: center;
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  .skill:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .skill-ico {
+    width: 44px; height: 44px;
+    margin: 0 auto 12px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+
+  /* INCLUDED IN PROGRAM */
+  .included-block {
+    background: #fff;
+    border-radius: 24px;
+    padding: 48px 52px;
+    border: 1px solid var(--border);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+  }
+  .included-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 15px;
+    color: var(--text1);
+    border-bottom: 1px dashed var(--border);
+  }
+  .included-item:last-child, .included-item:nth-last-child(2) { border-bottom: none; }
+  .included-item svg {
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .cta-title .gold { color: var(--gold-lt); font-style: italic; }
+  .cta-sub {
+    font-size: 17px;
+    color: #b8c5d8;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 6px 16px rgba(201, 168, 76, 0.35);
+  }
+  .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+  .btn-ghost-light {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .btn-ghost-light:hover { background: rgba(255,255,255,0.15); }
+
+  /* FOOTER */
+  .footer {
+    background: var(--navy-2);
+    color: #b8c5d8;
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand-img { height: 70px; width: auto; margin-bottom: 18px; filter: brightness(1.1); }
+  .footer-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #8fa3c0;
+    margin-bottom: 24px;
+  }
+  .footer-col h4 {
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; font-size: 14px; }
+  .footer-col a { color: #b8c5d8; }
+  .footer-col a:hover { color: var(--gold-lt); }
+  .footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #8fa3c0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hero-title { font-size: 64px; }
+    .curriculum { grid-template-columns: 1fr; }
+    .curriculum::before { display: none; }
+    .whys { grid-template-columns: repeat(2, 1fr); }
+    .skills { grid-template-columns: repeat(2, 1fr); }
+    .schedule { grid-template-columns: 1fr; }
+    .included-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 38px; }
+    .nav-menu { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat + .stat:nth-child(3)::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 60px 0 70px; }
+    .hero-title { font-size: 44px; }
+    .section { padding: 60px 0; }
+    .whys, .skills { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="GAPE Academy" class="nav-logo-full"/>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html#programs" class="active">Хөтөлбөрүүд</a></li>
+      <li><a href="index.html#english">Англи хэл</a></li>
+      <li><a href="index.html">Тухай</a></li>
+      <li><a href="index.html#blog">Блог</a></li>
+      <li><a href="index.html#contact">Холбоо барих</a></li>
+    </ul>
+    <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Нүүр</a>
+    <span class="sep">/</span>
+    <a href="index.html#programs">Хөтөлбөрүүд</a>
+    <span class="sep">/</span>
+    <span class="current">CMA® Олон улсын сертификат</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">◆ Олон улсын мэргэжлийн цол ◆</div>
+      <div class="hero-tag">Эх орондоо суралцаж,</div>
+      <h1 class="hero-title">CMA® <span class="gold">Олон улсын</span><br>сертификат</h1>
+      <p class="hero-sub">
+        <strong>Certified Management Accountant</strong> — олон улсын мэргэшсэн удирдлагын нягтлан бодогч болох бодит боломж. Санхүүгийн карьераа дараагийн түвшинд хүргэе.
+      </p>
+      <div class="partner-row">
+        <div class="label">◆ Албан ёсны түнш</div>
+        <div class="partner">Becker<span>+</span></div>
+        <div class="partner">IMA<span>Silver Course Provider</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-n">2</div>
+        <div class="stat-l">Шалгалт<br>Part I & II</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">12<span class="small">–18</span></div>
+        <div class="stat-l">Сар<br>хөтөлбөрийн хугацаа</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">2</div>
+        <div class="stat-l">Удаа<br>7 хоногт хичээллэнэ</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">24<span class="small">/7</span></div>
+        <div class="stat-l">Becker онлайн<br>систем</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CMA (4 features) -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Яагаад CMA®</div>
+      <h2 class="section-title">Яагаад CMA® <span class="italic">гэж?</span></h2>
+      <p class="section-sub">Олон улсын удирдлагын нягтлан бодогчдын нийгэмлэг (IMA)-аас олгодог дэлхийд хүлээн зөвшөөрөгдсөн сертификат</p>
+    </div>
+
+    <div class="whys">
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Олон улсад<br>хүлээн зөвшөөрөгддөг</h3>
+        <p class="why-desc">Дэлхийн 180+ улсад хүчинтэй албан ёсны сертификат</p>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="why-title">CFO түвшний<br>карьерын боломж</h3>
+        <p class="why-desc">Санхүүгийн удирдагч болохын хамгийн богино зам</p>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 17l6-6 4 4 8-8"/>
+            <path d="M14 7h7v7"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Цалин 30%+<br>өсөх боломж</h3>
+        <p class="why-desc">Олон улсын судалгаагаар батлагдсан цалингийн өсөлт</p>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="9" r="6"/>
+            <path d="M9 14l-2 7 5-3 5 3-2-7"/>
+          </svg>
+        </div>
+        <h3 class="why-title">IMA байгууллагын<br>нэр хүндийн баталгаа</h3>
+        <p class="why-desc">Дэлхийн тэргүүлэх мэргэжлийн нийгэмлэг</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM Part I -->
+<section class="section section-paper">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">CMA Part I хичээл</div>
+      <h2 class="section-title">Хичээлийн <span class="italic">хуваарь</span></h2>
+      <p class="section-sub">Part I шалгалтад бэлдэх 3 үе шаттай систем</p>
+    </div>
+
+    <div class="curriculum">
+
+      <div class="cur-card">
+        <div class="cur-num">1</div>
+        <div class="cur-roman">I хэсэг</div>
+        <div class="cur-date">6 сарын 2 —<br>7 сарын 5</div>
+        <div class="cur-duration-wrapper"><span class="cur-duration">5 долоо хоног</span></div>
+        <ul class="cur-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Unit 1</strong> — Санхүүгийн тайлагналын шийдвэрүүд</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Unit 2</strong> — Өртгийн удирдлага</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cur-card">
+        <div class="cur-num">2</div>
+        <div class="cur-roman">II хэсэг</div>
+        <div class="cur-date">8 сарын 3 —<br>9 сарын 26</div>
+        <div class="cur-duration-wrapper"><span class="cur-duration">8 долоо хоног</span></div>
+        <ul class="cur-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Unit 3</strong> — Төлөвлөлт, төсөв, таамаглал</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Unit 4</strong> — Гүйцэтгэлийн удирдлага</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Unit 5</strong> — Дотоод хяналт</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Unit 6</strong> — Технологи ба аналитикс</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cur-card">
+        <div class="cur-num">3</div>
+        <div class="cur-roman">III хэсэг</div>
+        <div class="cur-date">9 сарын 29 —<br>10 сарын 17</div>
+        <div class="cur-duration-wrapper"><span class="cur-duration">3 долоо хоног</span></div>
+        <ul class="cur-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Simulated exam 1</strong></span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Revision and review</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Simulated exam 2</strong></span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Review and revision</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Schedule highlight -->
+    <div class="schedule">
+      <div>
+        <div class="schedule-title">Цагийн <span class="italic">хуваарь</span></div>
+        <p class="schedule-desc">7 хоногт 2 удаа · Онлайн + танхим хосолсон сургалт. Ажилтай байсан ч сурах боломжтой уян хатан хуваарь.</p>
+      </div>
+      <div class="schedule-times">
+        <div class="sch-time">
+          <div class="sch-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="sch-day">Мягмар гараг</div>
+            <div class="sch-hour">18:30 – 21:00</div>
+          </div>
+        </div>
+        <div class="sch-time">
+          <div class="sch-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <div>
+            <div class="sch-day">Бямба гараг</div>
+            <div class="sch-hour">08:30 – 12:30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS (10 competency areas) -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Ур чадварын хүрээ</div>
+      <h2 class="section-title">Таны нөлөөг <span class="italic">хүчирхэгжүүлэх</span> ур чадварууд</h2>
+      <p class="section-sub">Олон улсын удирдлагын нягтлан бодогчдын нийгэмлэгээс шинэчлэн гаргасан ур чадварын хүрээ</p>
+    </div>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="skill-name">Strategy, Planning & Performance</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+        </div>
+        <div class="skill-name">Reporting & Control</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="skill-name">Data Analytics & Insights</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <div class="skill-name">Cybersecurity & Data Privacy</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33h.01a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.01a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </div>
+        <div class="skill-name">Digital Transformation & Innovation</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c0-5 4-9 10-9s10 4 10 9"/><path d="M12 13a5 5 0 100-10 5 5 0 000 10z"/></svg>
+        </div>
+        <div class="skill-name">Sustainable Business & Governance</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2"/></svg>
+        </div>
+        <div class="skill-name">Leadership</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7a2 2 0 00-2-2H5a2 2 0 00-2 2v13a2 2 0 002 2h6"/><path d="M16 3v4M8 3v4M3 11h18M14 18l3 3 5-5"/></svg>
+        </div>
+        <div class="skill-name">Professional Ethics & Values</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="skill-name">Business Acumen & Operations</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <div class="skill-name">Emerging Technologies in Accounting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Хөтөлбөрт багтсан</div>
+      <h2 class="section-title">Бүх юм <span class="italic">багтсан</span></h2>
+      <p class="section-sub">Сурахаас гадна бүх албан ёсны хураамж, материал, шалгалтын төлбөр багтсан</p>
+    </div>
+
+    <div class="included-block">
+      <div class="included-grid">
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>CMA Part 1 шалгалтын бэлтгэлийн танхимын сургалт</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Албан ёсны сурах бичиг</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>CMA Part 2 шалгалтын бэлтгэлийн танхимын сургалт</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>IMA эхний жилийн хураамж</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span><strong>Becker CMA Review</strong> — 24/7 онлайн систем</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>CMA бүртгэлийн хураамж</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Сургалтын материал</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>CMA 2 шалгалтын төлбөр</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Орчин үеийн сургалтын орчин</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Туршлагатай мэргэжлийн багш нар</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-navy" id="register">
+  <div class="container">
+    <div class="cta">
+      <div class="hero-tag" style="color: var(--gold-lt);">Хүчирхэг ирээдүйн төлөө,</div>
+      <h2 class="cta-title">
+        Өнөөдөр <span class="gold">бүртгүүлээд</span><br>
+        карьераа хөгжүүлээрэй
+      </h2>
+      <p class="cta-sub">
+        Үнэгүй зөвлөгөө аваад, CMA® хөтөлбөрийн талаар дэлгэрэнгүй мэдээлэл аваарай. Манай мэргэжилтнүүд таны асуултанд хариулахад бэлэн.
+      </p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>
+          Үнэгүй бүртгүүлэх
+        </a>
+        <a href="tel:+97685457788" class="btn btn-ghost-light">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          976-85457788
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="GAPE Academy" class="footer-brand-img"/>
+        <p class="footer-desc">
+          Global Academy of Professional Education<br>
+          Олон улсын мэргэжлийн боловсролын төв · 2016 оноос
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Хөтөлбөрүүд</h4>
+        <ul>
+          <li><a href="1plus2.html">1+2 Бакалавр</a></li>
+          <li><a href="#">ACCA</a></li>
+          <li><a href="#">USCPA</a></li>
+          <li><a href="cma.html">CMA</a></li>
+          <li><a href="#">IELTS / TOEFL</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Бидний тухай</h4>
+        <ul>
+          <li><a href="index.html">GAPE-ийн түүх</a></li>
+          <li><a href="#">Багш нар</a></li>
+          <li><a href="#">Түншүүд</a></li>
+          <li><a href="#">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Холбоо барих</h4>
+        <ul>
+          <li>📞 976-85457788</li>
+          <li>✉️ info@gape.education</li>
+          <li>📍 River Castle, Блок C, 6 давхар</li>
+          <li>🌐 www.gape.education</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 GAPE Academy · Бүх эрх хуулиар хамгаалагдсан</div>
+      <div>
+        <a href="#" style="margin-right: 20px;">Нууцлалын бодлого</a>
+        <a href="#">Үйлчилгээний нөхцөл</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
