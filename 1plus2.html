@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1+2 Бакалаврын хөтөлбөр — GAPE Academy</title>
+  <meta name="description" content="GAPE Academy — Олон улсын мэргэжлийн боловсрол. ACCA, USCPA, CMA цолны хөтөлбөр, 1+2 Бакалаврын хөтөлбөр Их Британи, Австралид. 2016 оноос үйл ажиллагаа явуулж байна.">
+  <meta name="keywords" content="GAPE, ACCA, CMA, USCPA, 1+2 хөтөлбөр, Бакалавр, Их Британи, Австрали, олон улсын боловсрол, Монгол">
+  <meta name="author" content="GAPE Academy">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="1+2 Бакалаврын хөтөлбөр — GAPE Academy">
+  <meta property="og:description" content="Олон улсын мэргэжлийн боловсрол · ACCA · USCPA · CMA · 1+2 Бакалавр">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:url" content="https://www.gape.education">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="1+2 Бакалаврын хөтөлбөр — GAPE Academy">
+  <meta name="twitter:description" content="Олон улсын мэргэжлийн боловсрол">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0a2540;
+    --navy-2: #142339;
+    --navy-3: #1d4373;
+    --gold: #c9a84c;
+    --gold-lt: #e8c96e;
+    --gold-dk: #a8861f;
+    --gold-bg: #fdf6e3;
+    --blue: #2E75B6;
+    --blue-lt: #5B9BD5;
+    --blue-bg: #deeaf1;
+    --green: #4a8b3a;
+    --green-bg: #e8f3e2;
+    --purple: #6b4a8b;
+    --purple-bg: #ede5f5;
+    --bg: #ffffff;
+    --bg2: #f5f7fa;
+    --bg3: #eef1f8;
+    --border: #e4e8f1;
+    --text1: #0a2540;
+    --text2: #4a5878;
+    --text3: #8fa3c0;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text1);
+    line-height: 1.6;
+    background: var(--bg);
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ════════ NAVIGATION ════════ */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .nav-logo-full { height: 44px; width: auto; display: block; flex-shrink: 0; }
+  .nav-logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .nav-logo-sub {
+    font-size: 9px;
+    color: var(--gold-dk);
+    letter-spacing: 2px;
+    margin-top: 3px;
+    font-weight: 600;
+  }
+  .nav-menu {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-menu a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text1);
+  }
+  .nav-menu a:hover { color: var(--gold-dk); }
+  .nav-menu a.active { color: var(--gold-dk); font-weight: 600; }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .nav-cta:hover { background: var(--gold-lt); }
+
+  /* ════════ BREADCRUMB ════════ */
+  .breadcrumb {
+    background: var(--bg2);
+    padding: 14px 0;
+    font-size: 13px;
+    color: var(--text2);
+  }
+  .breadcrumb a { color: var(--text2); }
+  .breadcrumb a:hover { color: var(--gold-dk); }
+  .breadcrumb .sep {
+    margin: 0 10px;
+    color: var(--text3);
+  }
+  .breadcrumb .current { color: var(--navy); font-weight: 500; }
+
+  /* ════════ HERO ════════ */
+  .hero {
+    background:
+      radial-gradient(circle at 85% 20%, rgba(201,168,76,.2) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(46,117,182,.12) 0%, transparent 45%),
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 80px 0 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold));
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    color: var(--gold-lt);
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+  }
+  .hero-title .gold { color: var(--gold-lt); font-style: italic; }
+  .hero-tag {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: var(--gold-lt);
+    margin-bottom: 12px;
+  }
+  .hero-sub {
+    font-size: 19px;
+    color: #b8c5d8;
+    line-height: 1.65;
+    margin: 0 auto 28px;
+    max-width: 660px;
+    font-weight: 300;
+  }
+  .hero-sub strong { color: #fff; font-weight: 500; }
+
+  .savings-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
+    color: var(--navy);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+    margin-top: 8px;
+  }
+  .savings-pill .lbl {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .savings-pill .amt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  /* ════════ STATS ════════ */
+  .stats {
+    background: #fff;
+    padding: 50px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .stat {
+    text-align: center;
+    padding: 16px;
+    position: relative;
+  }
+  .stat + .stat::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    bottom: 20%;
+    width: 1px;
+    background: var(--border);
+  }
+  .stat-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .stat-n .small { font-size: 28px; color: var(--gold-dk); }
+  .stat-l {
+    font-size: 12px;
+    color: var(--text2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* ════════ SECTION ════════ */
+  .section { padding: 90px 0; }
+  .section-paper { background: var(--bg2); }
+  .section-navy { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
+  .section-navy .section-title { color: #fff; }
+  .section-navy .section-sub { color: #b8c5d8; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .section-tag::before, .section-tag::after {
+    content: '◆';
+    margin: 0 12px;
+    color: var(--gold);
+  }
+  .section-navy .section-tag { color: var(--gold-lt); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .section-title .italic {
+    font-style: italic;
+    color: var(--gold-dk);
+  }
+  .section-navy .section-title .italic { color: var(--gold-lt); }
+  .section-sub {
+    font-size: 17px;
+    color: var(--text2);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ════════ JOURNEY (3 phases) ════════ */
+  .journey {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    position: relative;
+  }
+  /* connector line */
+  .journey::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 16%;
+    right: 16%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--gold) 0 8px, transparent 8px 16px);
+    z-index: 0;
+  }
+  .phase {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 30px 32px;
+    border: 1.5px solid var(--border);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  .phase:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.1);
+    border-color: var(--gold);
+  }
+  .phase-num {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(10, 37, 64, 0.18);
+  }
+  .phase:nth-child(1) .phase-num { background: linear-gradient(135deg, var(--green) 0%, #5fa848 100%); }
+  .phase:nth-child(2) .phase-num { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 100%); }
+  .phase:nth-child(3) .phase-num { background: linear-gradient(135deg, var(--purple) 0%, #8b6cae 100%); }
+
+  .phase-tag {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text3);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .phase-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .phase-place {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text2);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .phase-list {
+    list-style: none;
+  }
+  .phase-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--text1);
+    line-height: 1.5;
+  }
+  .phase-list li svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .phase:nth-child(1) .phase-list li svg { color: var(--green); }
+  .phase:nth-child(2) .phase-list li svg { color: var(--blue); }
+  .phase:nth-child(3) .phase-list li svg { color: var(--purple); }
+
+  /* ════════ DIPLOMA HIGHLIGHT ════════ */
+  .diploma-card {
+    background: linear-gradient(135deg, #fff 0%, var(--gold-bg) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 24px;
+    padding: 40px 48px;
+    max-width: 900px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .diploma-seal {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+  }
+  .diploma-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .diploma-content h3 .italic { font-style: italic; color: var(--gold-dk); }
+  .diploma-content p {
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+
+  /* ════════ UNIVERSITIES ════════ */
+  .universities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .uni-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .uni-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.1);
+  }
+  .uni-img {
+    height: 180px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  .uni-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .uni-img-uk { background: linear-gradient(135deg, #012169 0%, #1a3a8c 100%); }
+  .uni-img-au { background: linear-gradient(135deg, #00008B 0%, #2952CC 100%); }
+  .uni-img-au-flinders { background: linear-gradient(135deg, #1a3a5c 0%, #c9a84c 100%); }
+  .uni-img-online { background: linear-gradient(135deg, #5b2c6f 0%, #8e44ad 100%); }
+  .uni-flag {
+    position: absolute;
+    top: 16px; left: 16px;
+    width: 36px; height: 24px;
+    border-radius: 4px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  .uni-name-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+  }
+  .uni-name-overlay .uni-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .uni-name-overlay .uni-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+  .uni-body {
+    padding: 22px 26px 26px;
+  }
+  .uni-location {
+    font-size: 13px;
+    color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .uni-degree {
+    font-size: 15px;
+    color: var(--text1);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .uni-degree strong { color: var(--gold-dk); }
+  .uni-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .uni-meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .uni-meta-label {
+    font-size: 10px;
+    color: var(--text3);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .uni-meta-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .uni-meta-val.gold { color: var(--gold-dk); }
+
+  /* ════════ COMPARISON TABLE ════════ */
+  .compare-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .compare {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(10, 37, 64, 0.08);
+  }
+  .compare th, .compare td {
+    padding: 22px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .compare thead th {
+    background: var(--navy);
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px 24px;
+  }
+  .compare thead th:first-child {
+    background: #fff;
+    color: var(--navy);
+    text-align: left;
+  }
+  .compare thead th.highlight {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
+    color: var(--navy);
+    position: relative;
+  }
+  .compare tbody td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--navy);
+    background: var(--bg2);
+    font-size: 14px;
+  }
+  .compare tbody td {
+    font-size: 15px;
+    color: var(--text2);
+  }
+  .compare tbody td.highlight-col {
+    background: var(--gold-bg);
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .compare tbody tr:last-child td { border-bottom: none; }
+
+  .savings-badge {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(8deg);
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(201, 168, 76, 0.5);
+    z-index: 5;
+  }
+  .savings-badge .label {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .savings-badge .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 4px 0 2px;
+  }
+  .savings-badge .upto {
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  /* ════════ WHY (5 reasons) ════════ */
+  .reasons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+  .reason {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  .reason:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--gold);
+    transform: translateY(-4px);
+  }
+  .reason-icon {
+    width: 56px; height: 56px;
+    margin: 0 auto 16px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .reason-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .reason-desc {
+    font-size: 12px;
+    color: #b8c5d8;
+    line-height: 1.5;
+  }
+
+  /* ════════ TESTIMONIAL ════════ */
+  .testimonial-block {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 24px;
+    padding: 48px 52px;
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  .testimonial-block::before {
+    content: '"';
+    position: absolute;
+    top: -20px; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    color: var(--gold);
+    line-height: 1;
+    background: var(--bg2);
+    padding: 0 16px;
+  }
+  .testimonial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.5;
+    margin: 20px 0 28px;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .ta-avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .ta-info {
+    text-align: left;
+  }
+  .ta-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .ta-role {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 2px;
+  }
+
+  /* ════════ CTA ════════ */
+  .cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .cta-title .gold { color: var(--gold-lt); font-style: italic; }
+  .cta-sub {
+    font-size: 17px;
+    color: #b8c5d8;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 6px 16px rgba(201, 168, 76, 0.35);
+  }
+  .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+  .btn-ghost-light {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .btn-ghost-light:hover { background: rgba(255,255,255,0.15); }
+
+  /* ════════ FOOTER ════════ */
+  .footer {
+    background: var(--navy-2);
+    color: #b8c5d8;
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand-img { height: 70px; width: auto; margin-bottom: 18px; }
+  .footer-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #8fa3c0;
+    margin-bottom: 24px;
+  }
+  .footer-col h4 {
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; font-size: 14px; }
+  .footer-col a { color: #b8c5d8; }
+  .footer-col a:hover { color: var(--gold-lt); }
+  .footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #8fa3c0;
+  }
+
+  /* ════════ RESPONSIVE ════════ */
+  @media (max-width: 1024px) {
+    .hero-title { font-size: 64px; }
+    .universities { grid-template-columns: 1fr; }
+    .journey { grid-template-columns: 1fr; }
+    .journey::before { display: none; }
+    .reasons { grid-template-columns: repeat(2, 1fr); }
+    .section-title { font-size: 38px; }
+    .nav-menu { display: none; }
+    .savings-badge { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat + .stat:nth-child(3)::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 60px 0 70px; }
+    .hero-title { font-size: 48px; }
+    .section { padding: 60px 0; }
+    .reasons { grid-template-columns: 1fr; }
+    .diploma-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 32px 24px;
+    }
+    .diploma-seal { margin: 0 auto; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ NAVIGATION ════════ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="GAPE Academy" class="nav-logo-full"/>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#" class="active">Хөтөлбөрүүд</a></li>
+      <li><a href="#">Англи хэл</a></li>
+      <li><a href="#">Тухай</a></li>
+      <li><a href="#">Блог</a></li>
+      <li><a href="#">Холбоо барих</a></li>
+    </ul>
+    <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+  </div>
+</nav>
+
+<!-- ════════ BREADCRUMB ════════ -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Нүүр</a>
+    <span class="sep">/</span>
+    <a href="index.html#programs">Хөтөлбөрүүд</a>
+    <span class="sep">/</span>
+    <span class="current">1+2 Бакалаврын хөтөлбөр</span>
+  </div>
+</div>
+
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">◆ Монголын хамгийн анхны 1+2 хөтөлбөр ◆</div>
+      <div class="hero-tag">Start locally,</div>
+      <h1 class="hero-title">1+2 <span class="gold">Бакалавр</span><br>хөтөлбөр</h1>
+      <p class="hero-sub">
+        <strong>1 жил Монголд</strong> + <strong>2 жил гадаадад</strong> — Их Британи эсвэл Австралийн их сургуулийн бакалаврын зэрэгтэй болохын хамгийн ухаалаг, хямд зам.
+      </p>
+      <div class="savings-pill">
+        <div>
+          <div class="lbl">Хэмнэлт</div>
+          <div class="amt">141 сая ₮ хүртэл</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ STATS ════════ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-n">3</div>
+        <div class="stat-l">Жилийн<br>туршлага</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">3</div>
+        <div class="stat-l">Үе<br>төгсөгчид</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">20</div>
+        <div class="stat-l">Оюутан<br>1 ангид</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">141<span class="small"> сая₮</span></div>
+        <div class="stat-l">Хүртэл<br>хэмнэлт</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ JOURNEY ════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Хөтөлбөрийн замнал</div>
+      <h2 class="section-title">1+2 <span class="italic">хөтөлбөр</span> гэж юу вэ?</h2>
+      <p class="section-sub">
+        1 жил Монголд + 2 жил гадаадад — олон улсад хөтлөх хамгийн ухаалаг зам
+      </p>
+    </div>
+
+    <div class="journey">
+
+      <div class="phase">
+        <div class="phase-num">1</div>
+        <div class="phase-tag">1 жил · Монголд</div>
+        <div class="phase-title">GAPE-д суралцана</div>
+        <div class="phase-place">Улаанбаатар, Монгол</div>
+        <ul class="phase-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Англи хэлний бэлтгэл
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <strong style="color:var(--green);">Олон улсын бизнесийн диплом</strong></li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Хүртээмжтэй суралцах орчин
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Гадаадад суралцах бэлтгэл
+          </li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-num">2</div>
+        <div class="phase-tag">2 жил · Гадаадад</div>
+        <div class="phase-title">Их сургуульд<br>2-р курсээс эхэлнэ</div>
+        <div class="phase-place">Их Британи эсвэл Австрали</div>
+        <ul class="phase-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <strong>2-р курс рүү шууд</strong> орох (1-р курс хэрэггүй)
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Хүссэн мэргэжлээрээ суралцах
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Тэтгэлэг авах боломжтой
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Цагийн ажил хийх боломжтой
+          </li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-num">3</div>
+        <div class="phase-tag">Төгсөлт · Ирээдүй</div>
+        <div class="phase-title">Бакалаврын<br>зэрэг</div>
+        <div class="phase-place">Дэлхийд хүлээн зөвшөөрөгдсөн</div>
+        <ul class="phase-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Глобал карьерт хүрэх боломж
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <strong>Цаг, зардал</strong> хэмнэнэ
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Дэлхийд үнэлэгдсэн боловсрол
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Үргэлжлүүлэн суралцах боломж
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Diploma highlight -->
+    <div class="diploma-card">
+      <div class="diploma-seal">★</div>
+      <div class="diploma-content">
+        <h3>Монголд сурахдаа <span class="italic">олон улсын бизнесийн диплом</span> эзэмшинэ</h3>
+        <p>
+          Энэхүү олон улсын хүлээн зөвшөөрөгдсөн дипломоор Их Британи, Австралийн их сургуулийн <strong>2-р курсээс шууд</strong> үргэлжлүүлэн суралцана. 1 жил хэмнэгдэж, бакалаврын зэргээ 3 жилд төгсөнө.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ UNIVERSITIES ════════ -->
+<section class="section section-paper">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-tag">Шилдэг их сургуулиудын сонголт</div>
+      <h2 class="section-title">Дэлхийд <span class="italic">шалгарсан</span><br>4 их сургууль</h2>
+      <p class="section-sub">
+        Их Британи, Австралийн нэр хүндтэй их сургуулиудтай хамтран ажилладаг. Тэтгэлэг авах боломжтой.
+      </p>
+    </div>
+
+    <div class="universities">
+
+      <!-- BPP University -->
+      <div class="uni-card">
+        <div class="uni-img uni-img-uk">
+          <div class="uni-flag">🇬🇧</div>
+          <div class="uni-name-overlay">
+            <div class="uni-label">United Kingdom</div>
+            <div class="uni-name">BPP University</div>
+          </div>
+        </div>
+        <div class="uni-body">
+          <div class="uni-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-7-7-12a7 7 0 0114 0c0 5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Лондон, Их Британи
+          </div>
+          <div class="uni-degree">Нягтлан бодох бүртгэл, санхүүгийн бакалавр <strong>+ ACCA II түвшин</strong></div>
+          <div class="uni-meta">
+            <div class="uni-meta-block">
+              <div class="uni-meta-label">Хугацаа</div>
+              <div class="uni-meta-val">3 жил</div>
+            </div>
+            <div class="uni-meta-block" style="text-align:right;">
+              <div class="uni-meta-label">Тэтгэлэг ~</div>
+              <div class="uni-meta-val gold">108 сая ₮</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Torrens University -->
+      <div class="uni-card">
+        <div class="uni-img uni-img-au">
+          <div class="uni-flag">🇦🇺</div>
+          <div class="uni-name-overlay">
+            <div class="uni-label">Australia</div>
+            <div class="uni-name">Torrens University</div>
+          </div>
+        </div>
+        <div class="uni-body">
+          <div class="uni-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-7-7-12a7 7 0 0114 0c0 5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Сидней · Мельбурн · Аделаид · Брисбэн
+          </div>
+          <div class="uni-degree"><strong>Бизнес, маркетинг, энтрепренершип</strong>, спортын удирдлага, нягтлан бодох бүртгэл</div>
+          <div class="uni-meta">
+            <div class="uni-meta-block">
+              <div class="uni-meta-label">Хугацаа</div>
+              <div class="uni-meta-val">3 жил</div>
+            </div>
+            <div class="uni-meta-block" style="text-align:right;">
+              <div class="uni-meta-label">Тэтгэлэг ~</div>
+              <div class="uni-meta-val gold">108 сая ₮</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flinders University -->
+      <div class="uni-card">
+        <div class="uni-img uni-img-au-flinders">
+          <div class="uni-flag">🇦🇺</div>
+          <div class="uni-name-overlay">
+            <div class="uni-label">Australia</div>
+            <div class="uni-name">Flinders University</div>
+          </div>
+        </div>
+        <div class="uni-body">
+          <div class="uni-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-7-7-12a7 7 0 0114 0c0 5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Аделаид, Австрали
+          </div>
+          <div class="uni-degree">Нягтлан бодох бүртгэлийн <strong>бакалавр</strong></div>
+          <div class="uni-meta">
+            <div class="uni-meta-block">
+              <div class="uni-meta-label">Хугацаа</div>
+              <div class="uni-meta-val">3.5 жил</div>
+            </div>
+            <div class="uni-meta-block" style="text-align:right;">
+              <div class="uni-meta-label">Тэтгэлэг ~</div>
+              <div class="uni-meta-val gold">108 сая ₮</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- University of London -->
+      <div class="uni-card">
+        <div class="uni-img uni-img-online">
+          <div class="uni-flag">🇬🇧</div>
+          <div class="uni-name-overlay">
+            <div class="uni-label">United Kingdom · Online</div>
+            <div class="uni-name">University of London</div>
+          </div>
+        </div>
+        <div class="uni-body">
+          <div class="uni-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+            Онлайнаар, Их Британи
+          </div>
+          <div class="uni-degree">Мэргэшсэн нягтлан бодох бүртгэлийн бакалавр <strong>+ ACCA II түвшин</strong></div>
+          <div class="uni-meta">
+            <div class="uni-meta-block">
+              <div class="uni-meta-label">Хугацаа</div>
+              <div class="uni-meta-val">3 жил</div>
+            </div>
+            <div class="uni-meta-block" style="text-align:right;">
+              <div class="uni-meta-label">Зардал</div>
+              <div class="uni-meta-val gold">~30 сая ₮</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ COMPARISON ════════ -->
+<section class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-tag">Харьцуулалт</div>
+      <h2 class="section-title">Яагаад <span class="italic">1+2</span> хөтөлбөрийг сонгох вэ?</h2>
+      <p class="section-sub">Уламжлалт 4 жил гадаадад суралцахтай харьцуулахад асар их хэмнэлт</p>
+    </div>
+
+    <div class="compare-wrapper">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Харьцуулалт</th>
+            <th>Уламжлалт<br>(4 жил гадаадад)</th>
+            <th class="highlight">GAPE 1+2 хөтөлбөр</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Сурах хугацаа</td>
+            <td>4 жил гадаадад</td>
+            <td class="highlight-col">1 жил Монголд + 2 жил гадаадад = <strong>3 жил</strong></td>
+          </tr>
+          <tr>
+            <td>Ойролцоо зардал</td>
+            <td>~300+ сая ₮</td>
+            <td class="highlight-col"><strong>~159 сая ₮</strong></td>
+          </tr>
+          <tr>
+            <td>Суралцах орчин</td>
+            <td>Шинэ орчинд дасан зохицох</td>
+            <td class="highlight-col">Эхний жилдээ эх орондоо бэлтгэгдэнэ</td>
+          </tr>
+          <tr>
+            <td>Давуу тал</td>
+            <td>Өндөр зардал, дасан зохицох хугацаа их</td>
+            <td class="highlight-col">Зардал хэмнэнэ, дасан зохицох явц хялбар</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="savings-badge">
+        <div class="label">Хэмнэлт</div>
+        <div class="amount">141 сая ₮</div>
+        <div class="upto">хүртэл</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ 5 REASONS ════════ -->
+<section class="section section-navy">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-tag">Шалтгаан</div>
+      <h2 class="section-title">1+2 хөтөлбөрийг <span class="italic">сонгох</span> 5 шалтгаан</h2>
+    </div>
+
+    <div class="reasons">
+
+      <div class="reason">
+        <div class="reason-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 11v.01M5 11a4 4 0 014-4h5a4 4 0 014 4v3a3 3 0 01-3 3h-1l-1 2h-3l-1-2H8a3 3 0 01-3-3z"/>
+          </svg>
+        </div>
+        <div class="reason-title">Зардлаа<br>хэмнэх</div>
+        <div class="reason-desc">Дундажаар 141 сая ₮ хүртэл хэмнэнэ</div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="8" r="3"/>
+            <path d="M3 20a6 6 0 0112 0M16 4a3 3 0 010 6M21 20a5 5 0 00-3-4.5"/>
+          </svg>
+        </div>
+        <div class="reason-title">Хүртээмжтэй<br>орчин</div>
+        <div class="reason-desc">Нэг ангид зөвхөн 20 оюутан</div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>
+          </svg>
+        </div>
+        <div class="reason-title">Олон улсын<br>дэмжлэг</div>
+        <div class="reason-desc">Гадаадад суралцахад бүрэн бэлтгэнэ</div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="9" r="6"/>
+            <path d="M9 14l-2 7 5-3 5 3-2-7"/>
+          </svg>
+        </div>
+        <div class="reason-title">Шалгарсан<br>их сургуулиуд</div>
+        <div class="reason-desc">Их Британи, Австралийн их сургуулиуд</div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 3"/>
+          </svg>
+        </div>
+        <div class="reason-title">Цаг хугацаа<br>хэмнэнэ</div>
+        <div class="reason-desc">Бакалаврын зэргээ 3 жилд</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TESTIMONIAL ════════ -->
+<section class="section section-paper">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-tag">Сурагчдын сэтгэгдэл</div>
+      <h2 class="section-title">Манай <span class="italic">төгсөгчид</span> юу хэлж байна?</h2>
+    </div>
+
+    <div class="testimonial-block">
+      <p class="testimonial-quote">
+        1+2 хөтөлбөрөөр бэлтгэгдээд ирсэндээ үнэхээр баяртай байгаа. Би шууд ирсэн бол амжилттай суралцахад хэцүү байх байсан.
+      </p>
+      <div class="testimonial-author">
+        <div class="ta-avatar">МБ</div>
+        <div class="ta-info">
+          <div class="ta-name">Маралмаа Б.</div>
+          <div class="ta-role">Torrens University · 3-р курсын оюутан</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ CTA ════════ -->
+<section class="section section-navy" id="register">
+  <div class="container">
+    <div class="cta">
+      <div class="hero-tag" style="color: var(--gold-lt);">Graduate globally.</div>
+      <h2 class="cta-title">
+        Олон улсын <span class="gold">боловсролоо</span><br>
+        эх орондоо эхлүүлээрэй
+      </h2>
+      <p class="cta-sub">
+        Үнэгүй зөвлөгөө аваад, өөрт тохирох их сургуулиа сонгоорой. Манай мэргэжилтнүүд таны асуултанд хариулахад бэлэн.
+      </p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>
+          Үнэгүй бүртгүүлэх
+        </a>
+        <a href="tel:+97685457788" class="btn btn-ghost-light">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          976-85457788
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="GAPE Academy" class="footer-brand-img" style="filter: brightness(1.1);"/>
+        <p class="footer-desc">
+          Global Academy of Professional Education<br>
+          Олон улсын мэргэжлийн боловсролын төв · 2016 оноос
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Хөтөлбөрүүд</h4>
+        <ul>
+          <li><a href="1plus2.html">1+2 Бакалавр</a></li>
+          <li><a href="#">ACCA</a></li>
+          <li><a href="#">USCPA</a></li>
+          <li><a href="#">CMA</a></li>
+          <li><a href="#">IELTS / TOEFL</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Бидний тухай</h4>
+        <ul>
+          <li><a href="#">GAPE-ийн түүх</a></li>
+          <li><a href="#">Багш нар</a></li>
+          <li><a href="#">Түншүүд</a></li>
+          <li><a href="#">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Холбоо барих</h4>
+        <ul>
+          <li>📞 976-85457788</li>
+          <li>✉️ info@gape.education</li>
+          <li>📍 River Castle, Блок C, 6 давхар</li>
+          <li>🌐 www.gape.education</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 GAPE Academy · Бүх эрх хуулиар хамгаалагдсан</div>
+      <div>
+        <a href="#" style="margin-right: 20px;">Нууцлалын бодлого</a>
+        <a href="#">Үйлчилгээний нөхцөл</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
