@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPA — US Certified Public Accountant | GAPE Academy</title>
+<meta name="description" content="CPA (Certified Public Accountant) — АНУ-ын мэргэшсэн нягтлан бодогчийн цол. CORE 3 + Discipline 1 шалгалт, 2 жилд төгсөх боломжтой. GAPE Academy Becker партнер.">
+<meta name="keywords" content="CPA, US CPA, USCPA, GAPE, Becker, нягтлан бодогч, олон улсын цол, АНУ">
+<meta property="og:title" content="CPA — GAPE Academy">
+<meta property="og:description" content="АНУ-ын мэргэшсэн нягтлан бодогчийн цол · Becker партнер">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0a2540;
+    --navy-2: #142339;
+    --navy-3: #1d4373;
+    --gold: #c9a84c;
+    --gold-lt: #e8c96e;
+    --gold-dk: #a8861f;
+    --gold-bg: #fdf6e3;
+    --blue: #2E75B6;
+    --blue-lt: #5B9BD5;
+    --blue-bg: #deeaf1;
+    --green: #4a8b3a;
+    --purple: #6b4a8b;
+    --red: #c0392b;
+    --bg: #ffffff;
+    --bg2: #f5f7fa;
+    --bg3: #eef1f8;
+    --border: #e4e8f1;
+    --text1: #0a2540;
+    --text2: #4a5878;
+    --text3: #8fa3c0;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text1);
+    line-height: 1.6;
+    background: var(--bg);
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0;
+  }
+  .nav-logo-full { height: 44px; width: auto; display: block; flex-shrink: 0; }
+  .nav-menu { display: flex; gap: 36px; list-style: none; }
+  .nav-menu a { font-size: 14px; font-weight: 500; color: var(--text1); }
+  .nav-menu a:hover { color: var(--gold-dk); }
+  .nav-menu a.active { color: var(--gold-dk); font-weight: 600; }
+  .nav-cta {
+    background: var(--gold); color: var(--navy);
+    padding: 10px 20px; border-radius: 8px;
+    font-size: 13px; font-weight: 600;
+  }
+  .nav-cta:hover { background: var(--gold-lt); }
+
+  /* BREADCRUMB */
+  .breadcrumb { background: var(--bg2); padding: 14px 0; font-size: 13px; color: var(--text2); }
+  .breadcrumb a { color: var(--text2); }
+  .breadcrumb a:hover { color: var(--gold-dk); }
+  .breadcrumb .sep { margin: 0 10px; color: var(--text3); }
+  .breadcrumb .current { color: var(--navy); font-weight: 500; }
+
+  /* HERO */
+  .hero {
+    background:
+      radial-gradient(circle at 85% 20%, rgba(201,168,76,.2) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(46,117,182,.12) 0%, transparent 45%),
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 80px 0 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold));
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 2; text-align: center; }
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    color: var(--gold-lt);
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+  }
+  .hero-title .gold { color: var(--gold-lt); font-style: italic; }
+  .hero-tag {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: var(--gold-lt);
+    margin-bottom: 12px;
+  }
+  .hero-sub {
+    font-size: 19px;
+    color: #b8c5d8;
+    line-height: 1.65;
+    margin: 0 auto 28px;
+    max-width: 720px;
+    font-weight: 300;
+  }
+  .hero-sub strong { color: #fff; font-weight: 500; }
+
+  .partner-row {
+    display: inline-flex; align-items: center; gap: 32px;
+    margin-top: 16px; padding: 14px 32px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+  }
+  .partner-row .label {
+    font-size: 10px; color: #8fa3c0;
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .partner-row .partner {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 700;
+    color: #fff; letter-spacing: 1px;
+  }
+  .partner-row .partner span {
+    font-family: 'Inter';
+    font-size: 10px;
+    color: var(--gold-lt);
+    letter-spacing: 1.5px;
+    margin-left: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* STATS */
+  .stats { background: #fff; padding: 50px 0; border-bottom: 1px solid var(--border); }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .stat { text-align: center; padding: 16px; position: relative; }
+  .stat + .stat::before {
+    content: ''; position: absolute;
+    left: 0; top: 20%; bottom: 20%;
+    width: 1px; background: var(--border);
+  }
+  .stat-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .stat-n .small { font-size: 24px; color: var(--gold-dk); }
+  .stat-l {
+    font-size: 12px;
+    color: var(--text2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* SECTION */
+  .section { padding: 90px 0; }
+  .section-paper { background: var(--bg2); }
+  .section-navy { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
+  .section-navy .section-title { color: #fff; }
+  .section-navy .section-sub { color: #b8c5d8; }
+
+  .section-header { text-align: center; margin-bottom: 56px; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .section-tag::before, .section-tag::after { content: '◆'; margin: 0 12px; color: var(--gold); }
+  .section-navy .section-tag { color: var(--gold-lt); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px; font-weight: 700; color: var(--navy);
+    line-height: 1.05; letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .section-title .italic { font-style: italic; color: var(--gold-dk); }
+  .section-navy .section-title .italic { color: var(--gold-lt); }
+  .section-sub {
+    font-size: 17px; color: var(--text2);
+    max-width: 720px; margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* WHY 4 features */
+  .whys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .why {
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 24px 32px;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .why:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.1);
+    border-color: var(--gold);
+  }
+  .why-ico {
+    width: 64px; height: 64px;
+    margin: 0 auto 18px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: var(--gold-lt);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 16px rgba(10, 37, 64, 0.15);
+  }
+  .why-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .why-desc { font-size: 13px; color: var(--text2); line-height: 1.55; }
+
+  /* EXAM STRUCTURE — CORE + DISCIPLINE */
+  .exam-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  /* CORE exam block */
+  .core-block {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    border-radius: 24px;
+    padding: 40px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .core-block::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(201, 168, 76, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+  .core-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .core-badge {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .core-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--gold-lt);
+    letter-spacing: -2px;
+  }
+  .core-title-block { flex: 1; }
+  .core-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .core-tag {
+    font-size: 12px;
+    color: var(--gold-lt);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .core-desc {
+    font-size: 14px;
+    color: #b8c5d8;
+    line-height: 1.65;
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 1;
+  }
+  .core-subjects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .core-subj {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .core-subj-num {
+    width: 28px; height: 28px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  /* DISCIPLINE exam block */
+  .disc-block {
+    background: linear-gradient(135deg, #fff 0%, var(--gold-bg) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 24px;
+    padding: 40px 36px;
+    position: relative;
+  }
+  .disc-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .disc-badge {
+    background: var(--navy);
+    color: var(--gold-lt);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .disc-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--gold-dk);
+    letter-spacing: -2px;
+  }
+  .disc-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .disc-tag {
+    font-size: 11px;
+    color: var(--gold-dk);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .disc-desc {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+  .disc-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .disc-choice {
+    background: rgba(255,255,255,0.7);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    border-left: 4px solid var(--gold);
+  }
+  .disc-choice small {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text2);
+    margin-top: 2px;
+  }
+
+  /* TIMELINE */
+  .timeline-card {
+    background: #fff;
+    border: 2px solid var(--gold);
+    border-radius: 24px;
+    padding: 40px 48px;
+    max-width: 900px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 28px;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(201, 168, 76, 0.1);
+  }
+  .timeline-seal {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+  }
+  .timeline-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .timeline-content h3 .italic { font-style: italic; color: var(--gold-dk); }
+  .timeline-content p {
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.65;
+  }
+
+  /* JOURNEY (2 year roadmap) */
+  .journey {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .journey::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--gold) 0 8px, transparent 8px 16px);
+    z-index: 0;
+  }
+  .journey-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .journey-dot {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--gold);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(10, 37, 64, 0.08);
+  }
+  .journey-month {
+    font-size: 11px;
+    color: var(--gold-dk);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .journey-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .journey-desc {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.4;
+  }
+
+  /* CTA */
+  .cta { text-align: center; max-width: 700px; margin: 0 auto; }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .cta-title .gold { color: var(--gold-lt); font-style: italic; }
+  .cta-sub {
+    font-size: 17px;
+    color: #b8c5d8;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+  .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; border-radius: 10px;
+    font-weight: 600; font-size: 14px;
+    border: none; cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    box-shadow: 0 6px 16px rgba(201, 168, 76, 0.35);
+  }
+  .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+  .btn-ghost-light {
+    background: rgba(255,255,255,0.08); color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .btn-ghost-light:hover { background: rgba(255,255,255,0.15); }
+
+  /* FOOTER */
+  .footer { background: var(--navy-2); color: #b8c5d8; padding: 60px 0 30px; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand-img { height: 70px; width: auto; margin-bottom: 18px; filter: brightness(1.1); }
+  .footer-desc { font-size: 14px; line-height: 1.7; color: #8fa3c0; margin-bottom: 24px; }
+  .footer-col h4 {
+    font-size: 13px; color: #fff;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; font-size: 14px; }
+  .footer-col a { color: #b8c5d8; }
+  .footer-col a:hover { color: var(--gold-lt); }
+  .footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: #8fa3c0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hero-title { font-size: 64px; }
+    .whys { grid-template-columns: repeat(2, 1fr); }
+    .exam-grid { grid-template-columns: 1fr; }
+    .journey { grid-template-columns: repeat(2, 1fr); }
+    .journey::before { display: none; }
+    .timeline-card { grid-template-columns: 1fr; text-align: center; }
+    .timeline-seal { margin: 0 auto; }
+    .section-title { font-size: 38px; }
+    .nav-menu { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat + .stat:nth-child(3)::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 60px 0 70px; }
+    .hero-title { font-size: 44px; }
+    .section { padding: 60px 0; }
+    .whys, .journey { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .core-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .disc-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="GAPE Academy" class="nav-logo-full"/>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html#programs" class="active">Хөтөлбөрүүд</a></li>
+      <li><a href="index.html#english">Англи хэл</a></li>
+      <li><a href="index.html">Тухай</a></li>
+      <li><a href="index.html#blog">Блог</a></li>
+      <li><a href="index.html#contact">Холбоо барих</a></li>
+    </ul>
+    <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Нүүр</a>
+    <span class="sep">/</span>
+    <a href="index.html#programs">Хөтөлбөрүүд</a>
+    <span class="sep">/</span>
+    <span class="current">CPA — US Certified Public Accountant</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">◆ АНУ-ын мэргэжлийн цол ◆</div>
+      <div class="hero-tag">АНУ-ын стандартын,</div>
+      <h1 class="hero-title">CPA — <span class="gold">Public</span><br>Accountant</h1>
+      <p class="hero-sub">
+        <strong>Certified Public Accountant</strong> — АНУ-ын мэргэшсэн нягтлан бодогчийн цол. Дэлхийн санхүүгийн тэргүүлэгч стандарт. <strong>2 жилийн дотор</strong> бүх шалгалтаа дуусгаж, олон улсын карьераа эхлүүлэх боломж.
+      </p>
+      <div class="partner-row">
+        <div class="label">◆ Албан ёсны түнш</div>
+        <div class="partner">Becker<span>+</span></div>
+        <div class="partner">AICPA<span>Standard</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-n">3<span class="small">+1</span></div>
+        <div class="stat-l">Шалгалт<br>CORE + Discipline</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">2</div>
+        <div class="stat-l">Жил<br>хөтөлбөрийн хугацаа</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">6</div>
+        <div class="stat-l">Сар<br>1 шалгалтад бэлдэх</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">2</div>
+        <div class="stat-l">Хэлбэр<br>Онлайн + Танхим</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CPA (4 features) -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Яагаад CPA</div>
+      <h2 class="section-title">Яагаад CPA <span class="italic">гэж?</span></h2>
+      <p class="section-sub">АНУ-ын AICPA байгууллагаас олгодог, дэлхийн санхүүгийн салбарын тэргүүлэгч мэргэжлийн цол</p>
+    </div>
+
+    <div class="whys">
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="why-title">АНУ-ын<br>стандарт</h3>
+        <p class="why-desc">US GAAP, IFRS-н үнэн зөв ойлголттой мэргэжилтэн</p>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="9" r="6"/>
+            <path d="M9 14l-2 7 5-3 5 3-2-7"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Big 4 компанид<br>урих чадвар</h3>
+        <p class="why-desc">Deloitte, EY, KPMG, PwC хүсдэг мэргэжил</p>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 3"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Хурдан<br>үр дүн</h3>
+        <p class="why-desc">2 жилд бүх шалгалтаа дуусгах боломжтой</p>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 17l6-6 4 4 8-8"/>
+            <path d="M14 7h7v7"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Олон улсын<br>цалин түвшин</h3>
+        <p class="why-desc">АНУ-ын стандартын цалин, олон улсын карьер</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXAM STRUCTURE: CORE + DISCIPLINE -->
+<section class="section section-paper">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Шалгалтын бүтэц</div>
+      <h2 class="section-title">CORE 3 <span class="italic">+</span> Discipline 1</h2>
+      <p class="section-sub">CPA шалгалт нь 2024 оноос шинэчлэгдэж, 3 үндсэн (CORE) + 1 сонгох (Discipline) шалгалтаас бүрддэг</p>
+    </div>
+
+    <div class="exam-grid">
+
+      <!-- CORE 3 шалгалт -->
+      <div class="core-block">
+        <div class="core-header">
+          <div class="core-num">3</div>
+          <div class="core-title-block">
+            <div class="core-name">CORE шалгалт</div>
+            <div class="core-tag">Үндсэн · Заавал авах</div>
+          </div>
+          <div class="core-badge">Заавал</div>
+        </div>
+        <p class="core-desc">
+          Бүх CPA нэр дэвшигчдийн заавал авах ёстой үндсэн 3 шалгалт. Санхүүгийн нягтлан бодох бүртгэл, аудит, татварын үндэс юм.
+        </p>
+        <div class="core-subjects">
+          <div class="core-subj">
+            <div class="core-subj-num">1</div>
+            <div>
+              <strong>AUD</strong> — Auditing and Attestation
+            </div>
+          </div>
+          <div class="core-subj">
+            <div class="core-subj-num">2</div>
+            <div>
+              <strong>FAR</strong> — Financial Accounting and Reporting
+            </div>
+          </div>
+          <div class="core-subj">
+            <div class="core-subj-num">3</div>
+            <div>
+              <strong>REG</strong> — Taxation and Regulation
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISCIPLINE 1 шалгалт -->
+      <div class="disc-block">
+        <div class="disc-header">
+          <div class="disc-num">1</div>
+          <div>
+            <div class="disc-name">Discipline шалгалт</div>
+            <div class="disc-tag">Сонгох · 3 хувилбараас 1</div>
+          </div>
+        </div>
+        <p class="disc-desc">
+          3 мэргэшлийн хувилбараас өөрт тохирохыг сонгож, мэргэшил гүнзгийрүүлэх шалгалт.
+        </p>
+        <div class="disc-choices">
+          <div class="disc-choice">
+            <div>BAR — Business Analysis & Reporting</div>
+            <small>Санхүүгийн шинжилгээ, тайлагнал</small>
+          </div>
+          <div class="disc-choice">
+            <div>ISC — Information Systems & Controls</div>
+            <small>Технологи, мэдээллийн систем</small>
+          </div>
+          <div class="disc-choice">
+            <div>TCP — Tax Compliance & Planning</div>
+            <small>Татварын төлөвлөлт, дагаж мөрдөлт</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Timeline highlight -->
+    <div class="timeline-card">
+      <div class="timeline-seal">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 3"/>
+        </svg>
+      </div>
+      <div class="timeline-content">
+        <h3>1 шалгалтад <span class="italic">~6 сар</span> бэлтгэх — 2 жилд төгсөх</h3>
+        <p>
+          GAPE-н сургалт нэг шалгалтыг ~6 сар хичээллэн бэлддэг. Тогтмол хөтөлбөрөөр явбал <strong>2 жилийн дотор</strong> бүх 4 шалгалтаа дуусгаж, CPA цолтой болох боломжтой.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 2-YEAR JOURNEY ROADMAP -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">2 жилийн замнал</div>
+      <h2 class="section-title">CPA <span class="italic">төгсөх</span> замнал</h2>
+      <p class="section-sub">Жишээ хуваарь — 2 жилийн дотор 4 шалгалтыг яаж тарьж сурахыг харуулсан загвар</p>
+    </div>
+
+    <div class="journey">
+      <div class="journey-step">
+        <div class="journey-dot">1</div>
+        <div class="journey-month">0–6 сар</div>
+        <div class="journey-name">FAR</div>
+        <div class="journey-desc">Санхүүгийн нягтлан бодох бүртгэл</div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-dot">2</div>
+        <div class="journey-month">6–12 сар</div>
+        <div class="journey-name">AUD</div>
+        <div class="journey-desc">Аудит, баталгаажуулалт</div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-dot">3</div>
+        <div class="journey-month">12–18 сар</div>
+        <div class="journey-name">REG</div>
+        <div class="journey-desc">Татвар, эрхзүйн зохицуулалт</div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-dot">4</div>
+        <div class="journey-month">18–24 сар</div>
+        <div class="journey-name">Discipline</div>
+        <div class="journey-desc">Сонгосон мэргэшлийн шалгалт</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LEARNING FORMAT (Hybrid) -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Сургалтын хэлбэр</div>
+      <h2 class="section-title">Онлайн + Танхим <span class="italic">хосолсон</span></h2>
+      <p class="section-sub">Becker-ийн дэлхийд тэргүүлэх онлайн систем + GAPE-н танхимын сургалт</p>
+    </div>
+
+    <div class="whys" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
+      <div class="why" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); backdrop-filter: blur(8px);">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3 class="why-title" style="color: #fff;">Becker онлайн<br>систем</h3>
+        <p class="why-desc" style="color: #b8c5d8;">Дэлхийд тэргүүлэх CPA бэлтгэлийн платформ. 24/7 хүртээмжтэй, видео хичээл, дасгал, simulated exam.</p>
+      </div>
+      <div class="why" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); backdrop-filter: blur(8px);">
+        <div class="why-ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 12h.01M9 15h.01M9 18h.01M13 9h.01M13 12h.01M13 15h.01M13 18h.01"/>
+          </svg>
+        </div>
+        <h3 class="why-title" style="color: #fff;">GAPE танхимын<br>сургалт</h3>
+        <p class="why-desc" style="color: #b8c5d8;">Туршлагатай багштай нүүр тулсан хичээл, асуулт хариулт, дадлага. Бусад оюутантай хамтран суралцах.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-navy" id="register" style="padding-top: 0;">
+  <div class="container">
+    <div class="cta">
+      <div class="hero-tag" style="color: var(--gold-lt);">АНУ-ын стандартын карьерт,</div>
+      <h2 class="cta-title">
+        CPA-аар <span class="gold">эхэлье</span>
+      </h2>
+      <p class="cta-sub">
+        Үнэгүй зөвлөгөө аваад, CPA хөтөлбөрийн талаар дэлгэрэнгүй мэдээлэл аваарай. Хичээлийн хуваарь, эхлэх хугацааны талаар манай мэргэжилтнүүд хариулна.
+      </p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>
+          Үнэгүй бүртгүүлэх
+        </a>
+        <a href="tel:+97685457788" class="btn btn-ghost-light">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          976-85457788
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="GAPE Academy" class="footer-brand-img"/>
+        <p class="footer-desc">
+          Global Academy of Professional Education<br>
+          Олон улсын мэргэжлийн боловсролын төв · 2016 оноос
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Хөтөлбөрүүд</h4>
+        <ul>
+          <li><a href="1plus2.html">1+2 Бакалавр</a></li>
+          <li><a href="acca.html">ACCA</a></li>
+          <li><a href="cma.html">CMA</a></li>
+          <li><a href="cpa.html">CPA</a></li>
+          <li><a href="#">IELTS · General · Business</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Бидний тухай</h4>
+        <ul>
+          <li><a href="index.html">GAPE-ийн түүх</a></li>
+          <li><a href="#">Багш нар</a></li>
+          <li><a href="#">Түншүүд</a></li>
+          <li><a href="#">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Холбоо барих</h4>
+        <ul>
+          <li>📞 976-85457788</li>
+          <li>✉️ info@gape.education</li>
+          <li>📍 River Castle, Блок C, 6 давхар</li>
+          <li>🌐 www.gape.education</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 GAPE Academy · Бүх эрх хуулиар хамгаалагдсан</div>
+      <div>
+        <a href="#" style="margin-right: 20px;">Нууцлалын бодлого</a>
+        <a href="#">Үйлчилгээний нөхцөл</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
