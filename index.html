@@ -888,19 +888,15 @@
   .programs.english .pc-tag { color: var(--blue-lt); }
   .programs.english .pc-price { color: var(--blue); }
   }
-  .programs.english {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+ .programs.english {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
   }
   .programs.english > .program-card {
-    grid-column: span 2;
-  }
-  .programs.english > .program-card:nth-of-type(4) {
-    grid-column: 2 / span 2;
-  }
-  .programs.english > .program-card:nth-of-type(5) {
-    grid-column: 4 / span 2;
+    width: 300px;
+    flex: 0 0 300px;
   }
 
   /* ════════════════ WHY GAPE ════════════════ */
