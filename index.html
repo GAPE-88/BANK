@@ -889,12 +889,18 @@
   .programs.english .pc-price { color: var(--blue); }
   }
   .programs.english {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
   }
   .programs.english > * {
-    width: calc((100% - 40px) / 3);
+    grid-column: span 2;
+  }
+  .programs.english > *:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .programs.english > *:nth-child(5) {
+    grid-column: 4 / span 2;
   }
 
   /* ════════════════ WHY GAPE ════════════════ */
@@ -1263,7 +1269,10 @@
     .hero-content { grid-template-columns: 1fr; }
     .programs { grid-template-columns: repeat(2, 1fr); }
     .programs.three { grid-template-columns: repeat(2, 1fr); }
-    .programs.english > * { width: calc((100% - 20px) / 2); }
+    .programs.english { grid-template-columns: repeat(2, 1fr); }
+    .programs.english > * { grid-column: auto; }
+    .programs.english > *:nth-child(4),
+    .programs.english > *:nth-child(5) { grid-column: auto; }
     .featured-grid { grid-template-columns: 1fr; }
     .featured-left { padding: 48px 32px; }
     .featured-right { padding: 40px 32px; }
@@ -1281,7 +1290,10 @@
     .hero-title { font-size: 40px; letter-spacing: -1px; }
     .stat-n { font-size: 40px; }
     .programs, .programs.three { grid-template-columns: 1fr; }
-    .programs.english > * { width: 100%; }
+    .programs.english { grid-template-columns: 1fr; }
+    .programs.english > * { grid-column: auto; }
+    .programs.english > *:nth-child(4),
+    .programs.english > *:nth-child(5) { grid-column: auto; }
     .featured-badge {
       top: 14px; right: 14px;
       font-size: 9px;
