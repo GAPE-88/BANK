@@ -887,7 +887,7 @@
   .programs.english .pc-head-art { color: var(--blue-lt); }
   .programs.english .pc-tag { color: var(--blue-lt); }
   .programs.english .pc-price { color: var(--blue); }
-  }
+  
  .programs.english {
     display: flex;
     flex-wrap: wrap;
@@ -1265,10 +1265,7 @@
     .hero-content { grid-template-columns: 1fr; }
     .programs { grid-template-columns: repeat(2, 1fr); }
     .programs.three { grid-template-columns: repeat(2, 1fr); }
-    .programs.english { grid-template-columns: repeat(2, 1fr); }
-    .programs.english > * { grid-column: auto; }
-    .programs.english > *:nth-child(4),
-    .programs.english > *:nth-child(5) { grid-column: auto; }
+    .programs.english > .program-card { width: calc(50% - 10px); flex: 0 0 calc(50% - 10px); }
     .featured-grid { grid-template-columns: 1fr; }
     .featured-left { padding: 48px 32px; }
     .featured-right { padding: 40px 32px; }
@@ -1286,10 +1283,7 @@
     .hero-title { font-size: 40px; letter-spacing: -1px; }
     .stat-n { font-size: 40px; }
     .programs, .programs.three { grid-template-columns: 1fr; }
-    .programs.english { grid-template-columns: 1fr; }
-    .programs.english > * { grid-column: auto; }
-    .programs.english > *:nth-child(4),
-    .programs.english > *:nth-child(5) { grid-column: auto; }
+    .programs.english > .program-card { width: 100%; flex: 0 0 100%; }
     .featured-badge {
       top: 14px; right: 14px;
       font-size: 9px;
