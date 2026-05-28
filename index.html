@@ -887,12 +887,14 @@
   .programs.english .pc-head-art { color: var(--blue-lt); }
   .programs.english .pc-tag { color: var(--blue-lt); }
   .programs.english .pc-price { color: var(--blue); }
-
-  .programs.english {
-    grid-template-columns: repeat(3, 1fr);
   }
-  .programs.english.five {
-    grid-template-columns: repeat(3, 1fr);
+  .programs.english {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .programs.english > * {
+    width: calc((100% - 40px) / 3);
   }
 
   /* ════════════════ WHY GAPE ════════════════ */
@@ -1261,7 +1263,7 @@
     .hero-content { grid-template-columns: 1fr; }
     .programs { grid-template-columns: repeat(2, 1fr); }
     .programs.three { grid-template-columns: repeat(2, 1fr); }
-    .programs.english { grid-template-columns: repeat(2, 1fr); }
+    .programs.english > * { width: calc((100% - 20px) / 2); }
     .featured-grid { grid-template-columns: 1fr; }
     .featured-left { padding: 48px 32px; }
     .featured-right { padding: 40px 32px; }
@@ -1278,7 +1280,8 @@
     .hero { padding: 60px 0 80px; }
     .hero-title { font-size: 40px; letter-spacing: -1px; }
     .stat-n { font-size: 40px; }
-    .programs, .programs.english, .programs.three { grid-template-columns: 1fr; }
+    .programs, .programs.three { grid-template-columns: 1fr; }
+    .programs.english > * { width: 100%; }
     .featured-badge {
       top: 14px; right: 14px;
       font-size: 9px;
