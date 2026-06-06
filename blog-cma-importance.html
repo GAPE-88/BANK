@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Яагаад нягтлан бодогч бүр CMA® цолыг авах ёстой вэ? | GAPE Academy</title>
+<meta name="description" content="CMA® (Certified Management Accountant) цолны ач холбогдол, карьерын өсөлт, олон улсын боломжийн талаар дэлгэрэнгүй танилцуулга.">
+<meta name="keywords" content="CMA, нягтлан бодогч, олон улсын цол, карьер, GAPE, санхүү">
+<meta property="og:title" content="Яагаад нягтлан бодогч бүр CMA® цолыг авах ёстой вэ?">
+<meta property="og:description" content="CMA® — санхүүгийн мэргэжилтний дараагийн түвшинд хүрэх зам">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0a2540;
+    --navy-2: #142339;
+    --navy-3: #1d4373;
+    --gold: #c9a84c;
+    --gold-lt: #e8c96e;
+    --gold-dk: #a8861f;
+    --gold-bg: #fdf6e3;
+    --blue: #2E75B6;
+    --blue-lt: #5B9BD5;
+    --green: #4a8b3a;
+    --bg: #ffffff;
+    --bg2: #f5f7fa;
+    --bg3: #eef1f8;
+    --border: #e4e8f1;
+    --text1: #0a2540;
+    --text2: #4a5878;
+    --text3: #8fa3c0;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text1);
+    line-height: 1.6;
+    background: var(--bg);
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0;
+  }
+  .nav-logo-full { height: 44px; width: auto; display: block; flex-shrink: 0; }
+  .nav-menu { display: flex; gap: 36px; list-style: none; }
+  .nav-menu a { font-size: 14px; font-weight: 500; color: var(--text1); }
+  .nav-menu a:hover { color: var(--gold-dk); }
+  .nav-menu a.active { color: var(--gold-dk); font-weight: 600; }
+  .nav-cta {
+    background: var(--gold); color: var(--navy);
+    padding: 10px 20px; border-radius: 8px;
+    font-size: 13px; font-weight: 600;
+  }
+  .nav-cta:hover { background: var(--gold-lt); }
+
+  /* BREADCRUMB */
+  .breadcrumb { background: var(--bg2); padding: 14px 0; font-size: 13px; color: var(--text2); }
+  .breadcrumb a { color: var(--text2); }
+  .breadcrumb a:hover { color: var(--gold-dk); }
+  .breadcrumb .sep { margin: 0 10px; color: var(--text3); }
+  .breadcrumb .current { color: var(--navy); font-weight: 500; }
+
+  /* ARTICLE HERO */
+  .article-hero {
+    background: linear-gradient(135deg, var(--gold-dk) 0%, var(--gold) 100%);
+    color: #fff;
+    padding: 70px 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-hero::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--navy);
+  }
+  .article-hero-grid {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .article-hero-icon {
+    position: absolute;
+    top: 20%; right: -50px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 280px;
+    color: rgba(255,255,255,0.08);
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .article-hero-content { position: relative; z-index: 2; max-width: 760px; }
+  .article-category {
+    display: inline-block;
+    background: rgba(10, 37, 64, 0.2);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    flex-wrap: wrap;
+  }
+  .article-meta i { margin-right: 6px; }
+  .article-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .author-avatar {
+    width: 38px; height: 38px;
+    background: var(--navy);
+    color: var(--gold-lt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  /* ARTICLE BODY */
+  .article-body {
+    padding: 70px 0 80px;
+  }
+  .article-intro {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--text1);
+    font-weight: 400;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid var(--gold-bg);
+  }
+  .article-intro strong { color: var(--gold-dk); font-weight: 600; }
+
+  .article-body h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.25;
+    margin: 50px 0 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .article-body h2 .num {
+    font-size: 22px;
+    color: var(--gold-dk);
+    font-style: italic;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .article-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 36px 0 14px;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text1);
+    margin-bottom: 18px;
+  }
+  .article-body p strong { color: var(--navy); font-weight: 600; }
+  .article-body ul {
+    list-style: none;
+    margin: 16px 0 24px;
+    padding: 24px 28px;
+    background: var(--bg2);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+  }
+  .article-body ul li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text1);
+    padding: 6px 0 6px 28px;
+    position: relative;
+  }
+  .article-body ul li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+    top: 12px;
+  }
+
+  /* Highlight pull-quote */
+  .pull-quote {
+    margin: 40px 0;
+    padding: 32px 36px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    border-radius: 16px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .pull-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px; left: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 1;
+  }
+  .pull-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #fff;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .pull-quote p strong { color: var(--gold-lt); }
+
+  /* Summary box */
+  .summary-box {
+    margin: 40px 0;
+    padding: 32px 36px;
+    background: linear-gradient(135deg, #fff 0%, var(--gold-bg) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 16px;
+  }
+  .summary-box h3 {
+    margin-top: 0;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .summary-box h3::before {
+    content: '✦';
+    color: var(--gold-dk);
+  }
+  .summary-checks {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    background: none;
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .summary-checks li {
+    padding: 8px 0 8px 28px;
+    background: none;
+    border: none;
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+  .summary-checks li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dk);
+    font-weight: 700;
+    font-size: 16px;
+    top: 6px;
+  }
+
+  /* CTA card at end */
+  .article-cta {
+    margin: 60px 0 0;
+    padding: 48px 40px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(201,168,76,.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none;
+  }
+  .article-cta-content { position: relative; z-index: 1; }
+  .article-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .article-cta h3 .italic { font-style: italic; color: var(--gold-lt); }
+  .article-cta p {
+    color: #b8c5d8;
+    font-size: 15px;
+    margin-bottom: 24px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .article-cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 6px 16px rgba(201, 168, 76, 0.35);
+  }
+  .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+  .btn-ghost-light {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .btn-ghost-light:hover { background: rgba(255,255,255,0.15); }
+
+  /* Share bar */
+  .share-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 0;
+    padding: 20px 24px;
+    background: var(--bg2);
+    border-radius: 12px;
+  }
+  .share-bar-label {
+    font-size: 13px;
+    color: var(--text2);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .share-bar-icons {
+    display: flex;
+    gap: 8px;
+  }
+  .share-bar-icons a {
+    width: 36px; height: 36px;
+    background: #fff;
+    color: var(--navy);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .share-bar-icons a:hover {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  /* Related articles */
+  .related-section {
+    padding: 70px 0 90px;
+    background: var(--bg2);
+  }
+  .related-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .related-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .related-tag::before, .related-tag::after { content: '◆'; margin: 0 10px; color: var(--gold); }
+  .related-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .related-title .italic { font-style: italic; color: var(--gold-dk); }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .related-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    cursor: pointer;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(10, 37, 64, 0.1);
+    border-color: var(--gold);
+  }
+  .related-image {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+  }
+  .related-image::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .related-image-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 700;
+  }
+  .related-image.cat-acca { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); }
+  .related-image.cat-ielts { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 100%); }
+  .related-image.cat-cpa { background: linear-gradient(135deg, #1d4373 0%, var(--navy-2) 100%); }
+  .related-content {
+    padding: 22px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .related-category {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .related-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+  .related-meta {
+    display: flex;
+    gap: 14px;
+    font-size: 12px;
+    color: var(--text3);
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* FOOTER */
+  .footer { background: var(--navy-2); color: #b8c5d8; padding: 60px 0 30px; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand-img { height: 70px; width: auto; margin-bottom: 18px; filter: brightness(1.1); }
+  .footer-desc { font-size: 14px; line-height: 1.7; color: #8fa3c0; margin-bottom: 20px; }
+  .footer-social { display: flex; gap: 10px; margin-top: 8px; }
+  .footer-social a {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.08);
+    color: var(--gold-lt);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .footer-social a:hover {
+    background: var(--gold); color: var(--navy);
+    transform: translateY(-2px);
+  }
+  .footer-col h4 {
+    font-size: 13px; color: #fff;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; font-size: 14px; }
+  .footer-col a { color: #b8c5d8; }
+  .footer-col a:hover { color: var(--gold-lt); }
+  .footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: #8fa3c0;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(10, 37, 64, 0.75);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center; justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .modal-overlay.is-open { display: flex; opacity: 1; }
+  .modal-box {
+    background: #fff;
+    border-radius: 24px;
+    max-width: 820px; width: 100%;
+    max-height: 90vh;
+    overflow: hidden; position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+    display: flex; flex-direction: column;
+  }
+  .modal-overlay.is-open .modal-box { transform: translateY(0); }
+  .modal-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 28px 36px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 700;
+    line-height: 1.2; margin-bottom: 6px;
+  }
+  .modal-title .italic { font-style: italic; color: var(--gold-lt); }
+  .modal-subtitle { font-size: 14px; color: #b8c5d8; line-height: 1.5; }
+  .modal-close {
+    position: absolute; top: 20px; right: 20px;
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    color: #fff; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; line-height: 1;
+    transition: all 0.2s; padding: 0;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+  .modal-iframe-wrap {
+    flex: 1; overflow: hidden; position: relative;
+    background: var(--bg2);
+    min-height: 500px;
+  }
+  .modal-iframe {
+    width: 100%; height: 100%;
+    min-height: 600px;
+    border: none; display: block;
+  }
+  .modal-loading {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text2); font-size: 14px;
+    pointer-events: none;
+  }
+  body.modal-open { overflow: hidden; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .article-title { font-size: 36px; }
+    .article-body h2 { font-size: 26px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .summary-checks { grid-template-columns: 1fr; }
+    .nav-menu { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .article-hero { padding: 50px 0 50px; }
+    .article-title { font-size: 28px; }
+    .article-body { padding: 50px 0 60px; }
+    .article-body h2 { font-size: 22px; }
+    .article-body p, .article-body ul li { font-size: 15px; }
+    .pull-quote p { font-size: 18px; }
+    .article-cta { padding: 36px 24px; }
+    .article-cta h3 { font-size: 24px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .article-meta { gap: 14px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="GAPE Academy" class="nav-logo-full"/>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html#programs">Хөтөлбөрүүд</a></li>
+      <li><a href="english.html">Англи хэл</a></li>
+      <li><a href="index.html">Тухай</a></li>
+      <li><a href="blog.html" class="active">Блог</a></li>
+      <li><a href="index.html#contact">Холбоо барих</a></li>
+    </ul>
+    <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Нүүр</a>
+    <span class="sep">/</span>
+    <a href="blog.html">Блог</a>
+    <span class="sep">/</span>
+    <span class="current">Яагаад нягтлан бодогч бүр CMA® цолыг авах ёстой вэ?</span>
+  </div>
+</div>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+  <div class="article-hero-grid"></div>
+  <div class="article-hero-icon">CMA</div>
+  <div class="container">
+    <div class="article-hero-content">
+      <div class="article-category">CMA · Карьер</div>
+      <h1 class="article-title">Яагаад нягтлан бодогч бүр CMA® цолыг авах ёстой вэ?</h1>
+      <div class="article-meta">
+        <div class="article-author">
+          <div class="author-avatar">GA</div>
+          <span>GAPE Academy</span>
+        </div>
+        <span><i class="ti ti-calendar"></i> 2026/05/15</span>
+        <span><i class="ti ti-clock"></i> 8 минут</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+  <div class="container-narrow">
+
+    <p class="article-intro">
+      Өнөөгийн бизнесийн орчинд нягтлан бодогчийн үүрэг зөвхөн тайлан гаргах, бүртгэл хөтлөхөөр хязгаарлагдахаа больсон. Байгууллагууд санхүүгийн мэдээлэлд үндэслэн стратегийн шийдвэр гаргах чадвартай мэргэжилтнүүдийг эрэлхийлж байна. Энэ хэрэгцээг хангаж чаддаг дэлхийд хүлээн зөвшөөрөгдсөн мэргэжлийн зэрэг бол <strong>CMA® (Certified Management Accountant)</strong> юм.
+    </p>
+
+    <h2><span class="num">01</span>Санхүүгийн мэргэжилтнээс стратегийн зөвлөх болох боломж</h2>
+    <p>
+      CMA® нь зөвхөн нягтлан бодох бүртгэлийн мэдлэгээр хязгаарлагдахгүй. Санхүүгийн төлөвлөлт, гүйцэтгэлийн удирдлага, төсөв төлөвлөгөө, эрсдэлийн удирдлага, стратегийн шийдвэр гаргалт зэрэг байгууллагын удирдлагын түвшний ур чадварыг эзэмшүүлдэг.
+    </p>
+    <div class="pull-quote">
+      <p>Ингэснээр та зөвхөн <strong>"тоог тайлбарлагч"</strong> биш, харин удирдлагын шийдвэр гаргалтад нөлөөлөх <strong>үнэ цэнэтэй зөвлөх</strong> болж чадна.</p>
+    </div>
+
+    <h2><span class="num">02</span>Карьерын өсөлтийг хурдасгана</h2>
+    <p>
+      Олон улсын болон үндэсний томоохон компаниуд CMA® зэрэгтэй ажилтнуудыг илүү өндөр түвшний албан тушаалд томилох хандлагатай байдаг.
+    </p>
+    <p>CMA эзэмшигчид дараах чиглэлээр ахих боломжтой:</p>
+    <ul>
+      <li>Санхүүгийн менежер</li>
+      <li>Санхүү хариуцсан захирал (CFO)</li>
+      <li>Бизнес шинжээч</li>
+      <li>Санхүүгийн төлөвлөлтийн менежер</li>
+      <li>Гүйцэтгэлийн удирдлагын зөвлөх</li>
+    </ul>
+    <p>Энэ нь карьерын шат ахих хугацааг түргэсэхэд тусалдаг.</p>
+
+    <h2><span class="num">03</span>Олон улсад хүлээн зөвшөөрөгдсөн нэр хүнд</h2>
+    <p>
+      CMA® нь <strong>дэлхийн олон оронд</strong> хүлээн зөвшөөрөгдсөн мэргэжлийн зэрэг юм. Олон улсын компанид ажиллах, гадаад зах зээлд карьер хөгжүүлэх, олон улсын төсөлд оролцох боломжийг нэмэгдүүлдэг.
+    </p>
+    <p>
+      Таны мэдлэг, ур чадвар дэлхийн стандартын түвшинд хүрснийг баталгаажуулдаг учраас ажил олгогчдын итгэлийг илүү хурдан олж авдаг.
+    </p>
+
+    <h2><span class="num">04</span>Өндөр орлоготой болох боломжийг нэмэгдүүлнэ</h2>
+    <p>
+      Мэргэжлийн зэрэг нь ажил олгогчдод тухайн хүний мэдлэг, ур чадварыг баталгаажуулдаг. CMA® зэрэгтэй мэргэжилтнүүд ихэвчлэн удирдлагын түвшний ажилд томилогдож, илүү өндөр цалин болон урамшуулал авах боломжтой байдаг.
+    </p>
+    <div class="pull-quote">
+      <p>Өөрөөр хэлбэл, CMA® бол зөвхөн боловсролын <strong>хөрөнгө оруулалт биш</strong>, ирээдүйн орлогын өсөлтийн <strong>хөрөнгө оруулалт</strong> юм.</p>
+    </div>
+
+    <h2><span class="num">05</span>Ирээдүйн санхүүгийн мэргэжилтэнд шаардлагатай ур чадварыг эзэмшүүлнэ</h2>
+    <p>
+      Автоматжуулалт, хиймэл оюун ухаан хөгжихийн хэрээр энгийн бүртгэлийн ажил багасаж байна. Харин <strong>өгөгдөлд дүн шинжилгээ хийх</strong>, <strong>бизнесийн шийдвэрт нөлөөлөх</strong>, <strong>эрсдэлийг удирдах</strong> чадвар улам үнэ цэнэтэй болж байна.
+    </p>
+    <p>
+      CMA® хөтөлбөрийн агуулга нь ирээдүйн санхүүгийн мэргэжилтэнд шаардлагатай эдгээр чадварыг хөгжүүлэхэд чиглэдэг.
+    </p>
+
+    <!-- Summary box -->
+    <div class="summary-box">
+      <h3>Дүгнэлт</h3>
+      <p style="margin-bottom: 16px;">
+        Нягтлан бодогч хүн бүр CMA® цолыг авах ёстой хамгийн том шалтгаан нь — энэ цол таныг <strong>нягтлан бодогчоос бизнесийн стратегийн түнш</strong> болгон хөгжүүлдэгт оршино.
+      </p>
+      <ul class="summary-checks">
+        <li>Карьерын өсөлт</li>
+        <li>Олон улсын боломж</li>
+        <li>Өндөр орлого</li>
+        <li>Удирдлагын мэдлэг</li>
+        <li>Ирээдүйд өрсөлдөх чадвар</li>
+        <li>Стратегийн зөвлөх</li>
+      </ul>
+      <p style="margin-top: 20px; margin-bottom: 0; font-style: italic; color: var(--text2);">
+        CMA® бол зөвхөн нэг цол биш, харин санхүүгийн мэргэжилтний <strong style="color: var(--gold-dk);">дараагийн түвшинд хүрэх зам</strong> юм.
+      </p>
+    </div>
+
+    <!-- Share bar -->
+    <div class="share-bar">
+      <div class="share-bar-label">Хуваалцах:</div>
+      <div class="share-bar-icons">
+        <a href="#" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.6l.4-4H14V6.3c0-1 .2-1.3 1.2-1.3H18V0h-3.8C10.6 0 9 1.6 9 4.7V8z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 110-3.5 1.8 1.8 0 010 3.5zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg>
+        </a>
+        <a href="#" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href); alert('Холбоос хуулсан!'); return false;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007 0l4-4a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-4 4a5 5 0 007 7l1-1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <div class="article-cta-content">
+        <h3>GAPE Academy таныг CMA® цолыг <span class="italic">богино хугацаанд</span> үр дүнтэйгээр хүрэхэд туслах болно</h3>
+        <p>
+          Becker CMA Review системээр бэлтгэгдсэн, IMA Silver Course Provider статустай GAPE Academy-ийн CMA хөтөлбөртэй танилцаарай.
+        </p>
+        <div class="article-cta-buttons">
+          <a href="cma.html" class="btn btn-primary">
+            <i class="ti ti-school"></i>
+            CMA хөтөлбөрийн дэлгэрэнгүй
+          </a>
+          <a href="#register" class="btn btn-ghost-light">
+            <i class="ti ti-pencil"></i>
+            Үнэгүй бүртгүүлэх
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- RELATED ARTICLES -->
+<section class="related-section">
+  <div class="container">
+    <div class="related-header">
+      <div class="related-tag">Танд бас сонирхолтой байж магадгүй</div>
+      <h2 class="related-title">Бусад <span class="italic">нийтлэлүүд</span></h2>
+    </div>
+    <div class="related-grid">
+
+      <a href="blog.html#acca" class="related-card">
+        <div class="related-image cat-acca">
+          <div class="related-image-icon">ACCA</div>
+        </div>
+        <div class="related-content">
+          <div class="related-category">ACCA · Карьер</div>
+          <h3 class="related-card-title">ACCA-тай төгсөгчид Big 4-д хэрхэн ажилд орох вэ?</h3>
+          <div class="related-meta">
+            <span><i class="ti ti-calendar"></i> 2026/05/10</span>
+            <span><i class="ti ti-clock"></i> 7 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog.html#cpa" class="related-card">
+        <div class="related-image cat-cpa">
+          <div class="related-image-icon">CPA</div>
+        </div>
+        <div class="related-content">
+          <div class="related-category">CPA</div>
+          <h3 class="related-card-title">CPA шалгалтыг 2 жилд хэрхэн дуусгах вэ?</h3>
+          <div class="related-meta">
+            <span><i class="ti ti-calendar"></i> 2026/04/20</span>
+            <span><i class="ti ti-clock"></i> 8 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog.html#ielts" class="related-card">
+        <div class="related-image cat-ielts">
+          <div class="related-image-icon">IELTS</div>
+        </div>
+        <div class="related-content">
+          <div class="related-category">IELTS</div>
+          <h3 class="related-card-title">IELTS 7.5+ оноо авахын 5 нууц техник</h3>
+          <div class="related-meta">
+            <span><i class="ti ti-calendar"></i> 2026/05/05</span>
+            <span><i class="ti ti-clock"></i> 6 мин</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="GAPE Academy" class="footer-brand-img"/>
+        <p class="footer-desc">
+          Global Academy of Professional Education<br>
+          Олон улсын мэргэжлийн боловсролын төв · 2016 оноос
+        </p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/GAPEAcademy" target="_blank" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.6l.4-4H14V6.3c0-1 .2-1.3 1.2-1.3H18V0h-3.8C10.6 0 9 1.6 9 4.7V8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/gape.growth/" target="_blank" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/gape.academy" target="_blank" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 110-3.5 1.8 1.8 0 010 3.5zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@gapeacademy" target="_blank" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Хөтөлбөрүүд</h4>
+        <ul>
+          <li><a href="1plus2.html">1+2 Бакалавр</a></li>
+          <li><a href="acca.html">ACCA</a></li>
+          <li><a href="cma.html">CMA</a></li>
+          <li><a href="cpa.html">CPA</a></li>
+          <li><a href="english.html">Англи хэл</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Бидний тухай</h4>
+        <ul>
+          <li><a href="index.html">GAPE-ийн түүх</a></li>
+          <li><a href="#">Багш нар</a></li>
+          <li><a href="#">Түншүүд</a></li>
+          <li><a href="blog.html">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Холбоо барих</h4>
+        <ul>
+          <li>📞 976-85457788</li>
+          <li>✉️ info@gape.education</li>
+          <li>📍 River Castle, Блок C, 6 давхар</li>
+          <li>🌐 www.gape.education</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 GAPE Academy · Бүх эрх хуулиар хамгаалагдсан</div>
+      <div>
+        <a href="#" style="margin-right: 20px;">Нууцлалын бодлого</a>
+        <a href="#">Үйлчилгээний нөхцөл</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- REGISTRATION MODAL -->
+<div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button type="button" class="modal-close" onclick="closeRegisterModal()" aria-label="Хаах">&times;</button>
+      <div class="modal-title" id="modalTitle">Үнэгүй <span class="italic">бүртгүүлэх</span></div>
+      <div class="modal-subtitle">Маягтыг бөглөөд илгээгээрэй. Манай мэргэжилтэн 24 цагийн дотор холбоо барина.</div>
+    </div>
+    <div class="modal-iframe-wrap">
+      <div class="modal-loading">Маягт ачаалж байна...</div>
+      <iframe class="modal-iframe" id="registerIframe"
+              data-src="https://forms.office.com/Pages/ResponsePage.aspx?id=IL2lL3Yu-UmAzaeL_oFZaD1nJBNHOiBGkcQgEZZzvkVUNEsyRkZWUlVDUVdIOVVKV1dWWkRIUkk1My4u&embed=true"
+              title="Бүртгэлийн форм"
+              onload="document.querySelector('.modal-loading').style.display='none'"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openRegisterModal() {
+    const modal = document.getElementById('registerModal');
+    const iframe = document.getElementById('registerIframe');
+    const targetSrc = iframe.dataset.src;
+    if (iframe.src !== targetSrc) {
+      iframe.src = targetSrc;
+    }
+    modal.classList.add('is-open');
+    document.body.classList.add('modal-open');
+  }
+  function closeRegisterModal() {
+    document.getElementById('registerModal').classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+  }
+  document.getElementById('registerModal').addEventListener('click', function(e) {
+    if (e.target === this) closeRegisterModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeRegisterModal();
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const triggers = document.querySelectorAll('a[href="register.html"], a[href="#register"], a[href$="#register"]');
+    triggers.forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        openRegisterModal();
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
