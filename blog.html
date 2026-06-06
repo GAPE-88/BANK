@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог — GAPE Academy</title>
+<meta name="description" content="GAPE Academy блог — Олон улсын мэргэжлийн боловсрол, карьерын зөвлөгөө, ACCA, CMA, CPA, IELTS-ын тухай нийтлэлүүд.">
+<meta name="keywords" content="GAPE блог, ACCA нийтлэл, CMA, CPA, IELTS, карьер">
+<meta property="og:title" content="Блог — GAPE Academy">
+<meta property="og:description" content="Мэргэжлийн боловсрол, карьерын тухай хэрэгцээт мэдээллүүд">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0a2540;
+    --navy-2: #142339;
+    --navy-3: #1d4373;
+    --gold: #c9a84c;
+    --gold-lt: #e8c96e;
+    --gold-dk: #a8861f;
+    --gold-bg: #fdf6e3;
+    --blue: #2E75B6;
+    --blue-lt: #5B9BD5;
+    --green: #4a8b3a;
+    --purple: #6b4a8b;
+    --bg: #ffffff;
+    --bg2: #f5f7fa;
+    --bg3: #eef1f8;
+    --border: #e4e8f1;
+    --text1: #0a2540;
+    --text2: #4a5878;
+    --text3: #8fa3c0;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text1);
+    line-height: 1.6;
+    background: var(--bg);
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* NAV (same as detail pages) */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0;
+  }
+  .nav-logo-full { height: 44px; width: auto; display: block; flex-shrink: 0; }
+  .nav-menu { display: flex; gap: 36px; list-style: none; }
+  .nav-menu a { font-size: 14px; font-weight: 500; color: var(--text1); }
+  .nav-menu a:hover { color: var(--gold-dk); }
+  .nav-menu a.active { color: var(--gold-dk); font-weight: 600; }
+  .nav-cta {
+    background: var(--gold); color: var(--navy);
+    padding: 10px 20px; border-radius: 8px;
+    font-size: 13px; font-weight: 600;
+  }
+  .nav-cta:hover { background: var(--gold-lt); }
+
+  /* BREADCRUMB */
+  .breadcrumb { background: var(--bg2); padding: 14px 0; font-size: 13px; color: var(--text2); }
+  .breadcrumb a { color: var(--text2); }
+  .breadcrumb a:hover { color: var(--gold-dk); }
+  .breadcrumb .sep { margin: 0 10px; color: var(--text3); }
+  .breadcrumb .current { color: var(--navy); font-weight: 500; }
+
+  /* HERO */
+  .hero {
+    background:
+      radial-gradient(circle at 85% 20%, rgba(201,168,76,.2) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(46,117,182,.12) 0%, transparent 45%),
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 70px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold));
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 2; text-align: center; }
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    color: var(--gold-lt);
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  .hero-title .gold { color: var(--gold-lt); font-style: italic; }
+  .hero-sub {
+    font-size: 18px;
+    color: #b8c5d8;
+    line-height: 1.65;
+    margin: 0 auto;
+    max-width: 640px;
+    font-weight: 300;
+  }
+
+  /* CATEGORY FILTER */
+  .filter-bar {
+    background: #fff;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 73px;
+    z-index: 50;
+  }
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text2);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .filter-btn:hover {
+    border-color: var(--gold);
+    color: var(--navy);
+  }
+  .filter-btn.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+  .filter-btn .count {
+    margin-left: 6px;
+    opacity: 0.6;
+    font-size: 11px;
+  }
+
+  /* SECTION */
+  .section { padding: 70px 0; }
+  .section-paper { background: var(--bg2); }
+
+  /* FEATURED ARTICLE */
+  .featured {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+    box-shadow: 0 20px 50px rgba(10, 37, 64, 0.08);
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    margin-bottom: 60px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    color: inherit;
+  }
+  .featured:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 70px rgba(201, 168, 76, 0.2);
+  }
+  .featured-image {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+  }
+  .featured-image::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(201,168,76,.1) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .featured-image-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    color: var(--gold);
+    opacity: 0.3;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .featured-badge {
+    position: absolute;
+    top: 24px; left: 24px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    z-index: 2;
+  }
+  .featured-content {
+    padding: 50px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featured-category {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .featured-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+  .featured-excerpt {
+    font-size: 16px;
+    color: var(--text2);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--text3);
+    margin-bottom: 24px;
+  }
+  .featured-meta i { margin-right: 4px; color: var(--gold-dk); }
+  .featured-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 14px;
+    align-self: flex-start;
+  }
+  .featured-cta i { transition: transform 0.2s; }
+  .featured:hover .featured-cta i { transform: translateX(4px); }
+
+  /* BLOG GRID */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .blog-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    cursor: pointer;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(10, 37, 64, 0.12);
+    border-color: var(--gold);
+  }
+  .blog-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .blog-image::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .blog-image-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 84px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 700;
+    line-height: 1;
+  }
+  /* Image color variants by category */
+  .blog-image.cat-acca { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); }
+  .blog-image.cat-cma { background: linear-gradient(135deg, var(--gold-dk) 0%, var(--gold) 100%); }
+  .blog-image.cat-cpa { background: linear-gradient(135deg, #1d4373 0%, var(--navy-2) 100%); }
+  .blog-image.cat-ielts { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 100%); }
+  .blog-image.cat-english { background: linear-gradient(135deg, var(--green) 0%, #6ba858 100%); }
+  .blog-image.cat-career { background: linear-gradient(135deg, var(--purple) 0%, #8b6cae 100%); }
+  .blog-image.cat-pathway { background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%); }
+
+  .blog-content {
+    padding: 24px 26px 26px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-category {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-dk);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .blog-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+  .blog-excerpt {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text3);
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .blog-meta i { margin-right: 4px; color: var(--gold-dk); font-size: 14px; }
+
+  /* PAGINATION */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 60px;
+  }
+  .page-btn {
+    min-width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text1);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    font-family: 'Inter', sans-serif;
+  }
+  .page-btn:hover {
+    border-color: var(--gold);
+    color: var(--navy);
+  }
+  .page-btn.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+  .page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .page-dots {
+    color: var(--text3);
+    padding: 0 6px;
+  }
+
+  /* NEWSLETTER */
+  .newsletter {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .newsletter::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(201,168,76,.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .newsletter-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .newsletter-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .newsletter-title .gold { color: var(--gold-lt); font-style: italic; }
+  .newsletter-sub {
+    font-size: 16px;
+    color: #b8c5d8;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+  .newsletter-form {
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .newsletter-input {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    backdrop-filter: blur(8px);
+  }
+  .newsletter-input::placeholder { color: #8fa3c0; }
+  .newsletter-input:focus { outline: none; border-color: var(--gold); }
+  .newsletter-btn {
+    padding: 14px 28px;
+    border-radius: 10px;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+  .newsletter-btn:hover { background: var(--gold-lt); transform: translateY(-1px); }
+
+  /* FOOTER */
+  .footer { background: var(--navy-2); color: #b8c5d8; padding: 60px 0 30px; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand-img { height: 70px; width: auto; margin-bottom: 18px; filter: brightness(1.1); }
+  .footer-desc { font-size: 14px; line-height: 1.7; color: #8fa3c0; margin-bottom: 20px; }
+  .footer-social { display: flex; gap: 10px; margin-top: 8px; }
+  .footer-social a {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.08);
+    color: var(--gold-lt);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .footer-social a:hover {
+    background: var(--gold); color: var(--navy);
+    transform: translateY(-2px);
+  }
+  .footer-col h4 {
+    font-size: 13px; color: #fff;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; font-size: 14px; }
+  .footer-col a { color: #b8c5d8; }
+  .footer-col a:hover { color: var(--gold-lt); }
+  .footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: #8fa3c0;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(10, 37, 64, 0.75);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center; justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .modal-overlay.is-open { display: flex; opacity: 1; }
+  .modal-box {
+    background: #fff;
+    border-radius: 24px;
+    max-width: 820px; width: 100%;
+    max-height: 90vh;
+    overflow: hidden; position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+    display: flex; flex-direction: column;
+  }
+  .modal-overlay.is-open .modal-box { transform: translateY(0); }
+  .modal-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 28px 36px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 700;
+    line-height: 1.2; margin-bottom: 6px;
+  }
+  .modal-title .italic { font-style: italic; color: var(--gold-lt); }
+  .modal-subtitle { font-size: 14px; color: #b8c5d8; line-height: 1.5; }
+  .modal-close {
+    position: absolute; top: 20px; right: 20px;
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    color: #fff; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; line-height: 1;
+    transition: all 0.2s; padding: 0;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+  .modal-iframe-wrap {
+    flex: 1; overflow: hidden; position: relative;
+    background: var(--bg2);
+    min-height: 500px;
+  }
+  .modal-iframe {
+    width: 100%; height: 100%;
+    min-height: 600px;
+    border: none; display: block;
+  }
+  .modal-loading {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text2); font-size: 14px;
+    pointer-events: none;
+  }
+  body.modal-open { overflow: hidden; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hero-title { font-size: 48px; }
+    .featured { grid-template-columns: 1fr; }
+    .featured-image { min-height: 280px; }
+    .featured-content { padding: 36px 32px; }
+    .featured-title { font-size: 28px; }
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-menu { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 50px 0 60px; }
+    .hero-title { font-size: 36px; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-title { font-size: 32px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .filters { gap: 6px; }
+    .filter-btn { padding: 8px 16px; font-size: 12px; }
+    .modal-box { max-height: 95vh; border-radius: 16px; }
+    .modal-header { padding: 20px 24px; }
+    .modal-title { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="GAPE Academy" class="nav-logo-full"/>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html#programs">Хөтөлбөрүүд</a></li>
+      <li><a href="english.html">Англи хэл</a></li>
+      <li><a href="index.html">Тухай</a></li>
+      <li><a href="blog.html" class="active">Блог</a></li>
+      <li><a href="index.html#contact">Холбоо барих</a></li>
+    </ul>
+    <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Нүүр</a>
+    <span class="sep">/</span>
+    <span class="current">Блог</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">◆ Мэдээ · Зөвлөгөө ◆</div>
+      <h1 class="hero-title">
+        Мэргэжлийн <span class="gold">боловсролын</span><br>
+        блог
+      </h1>
+      <p class="hero-sub">
+        Олон улсын мэргэшил, карьерын замнал, гадаадад суралцах боломж — мэргэжилтнүүдийн бичсэн хэрэгцээт нийтлэлүүд нэг дор.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY FILTER -->
+<div class="filter-bar">
+  <div class="container">
+    <div class="filters">
+      <button class="filter-btn active" data-category="all">Бүгд<span class="count">9</span></button>
+      <button class="filter-btn" data-category="acca">ACCA<span class="count">2</span></button>
+      <button class="filter-btn" data-category="cma">CMA<span class="count">1</span></button>
+      <button class="filter-btn" data-category="cpa">CPA<span class="count">1</span></button>
+      <button class="filter-btn" data-category="ielts">IELTS<span class="count">2</span></button>
+      <button class="filter-btn" data-category="career">Карьер<span class="count">2</span></button>
+      <button class="filter-btn" data-category="pathway">Pathway<span class="count">1</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG LIST -->
+<section class="section section-paper">
+  <div class="container">
+
+    <!-- FEATURED ARTICLE -->
+    <a href="#" class="featured" data-category="cma">
+      <div class="featured-image">
+        <div class="featured-badge">★ Онцлох нийтлэл</div>
+        <div class="featured-image-icon">CMA</div>
+      </div>
+      <div class="featured-content">
+        <div class="featured-category">CMA · Карьер</div>
+        <h2 class="featured-title">Яагаад нягтлан бодогч бүр CMA цолыг авах ёстой вэ?</h2>
+        <p class="featured-excerpt">
+          Дэлхий нийтэд эрэлттэй санхүүгийн менежментийн мэргэшил болох CMA цолны ач холбогдол, бэлтгэх арга зам, амжилттай төгсөгчдийн туршлагыг танилцуулж байна. Олон улсын стандартын карьераа эндээс эхлүүлээрэй...
+        </p>
+        <div class="featured-meta">
+          <span><i class="ti ti-calendar"></i> 2026/05/15</span>
+          <span><i class="ti ti-clock"></i> 8 минут</span>
+          <span><i class="ti ti-user"></i> GAPE Team</span>
+        </div>
+        <span class="featured-cta">
+          Дэлгэрэнгүй унших
+          <i class="ti ti-arrow-right"></i>
+        </span>
+      </div>
+    </a>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid" id="blogGrid">
+
+      <!-- Article 1 -->
+      <a href="#" class="blog-card" data-category="acca">
+        <div class="blog-image cat-acca">
+          <div class="blog-image-icon">ACCA</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">ACCA · Карьер</div>
+          <h3 class="blog-title">ACCA-тай төгсөгчид Big 4-д хэрхэн ажилд орох вэ?</h3>
+          <p class="blog-excerpt">Deloitte, EY, KPMG, PwC — дэлхийн топ аудит фирмүүдэд хэрхэн анхааралд орох талаар туршлагатай мэргэжилтнүүдийн зөвлөгөө.</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/05/10</span>
+            <span><i class="ti ti-clock"></i> 7 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="#" class="blog-card" data-category="ielts">
+        <div class="blog-image cat-ielts">
+          <div class="blog-image-icon">IELTS</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">IELTS</div>
+          <h3 class="blog-title">IELTS 7.5+ оноо авахын 5 нууц техник</h3>
+          <p class="blog-excerpt">Speaking, Writing, Reading, Listening — 4 ур чадварын онооог нэгэн зэрэг өсгөх хэрэгцээтэй техникүүд.</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/05/05</span>
+            <span><i class="ti ti-clock"></i> 6 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="#" class="blog-card" data-category="pathway">
+        <div class="blog-image cat-pathway">
+          <div class="blog-image-icon">1+2</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">1+2 Pathway</div>
+          <h3 class="blog-title">1+2 Pathway хөтөлбөрөөр 141 сая төгрөг хэрхэн хэмнэх вэ?</h3>
+          <p class="blog-excerpt">Эх орондоо 1 жил суралцаад дараа нь Их Британи, Австралид шилжиж 2 жил суралцах ухаалаг шийдлийн зардлын дүн шинжилгээ.</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/04/28</span>
+            <span><i class="ti ti-clock"></i> 9 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 4 -->
+      <a href="#" class="blog-card" data-category="cpa">
+        <div class="blog-image cat-cpa">
+          <div class="blog-image-icon">CPA</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">CPA</div>
+          <h3 class="blog-title">CPA шалгалтыг 2 жилд хэрхэн дуусгах вэ?</h3>
+          <p class="blog-excerpt">CORE 3 + Discipline 1 шалгалтыг үр дүнтэй бэлдэх төлөвлөгөө, Becker-ийн системийг үр ашигтай ашиглах арга.</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/04/20</span>
+            <span><i class="ti ti-clock"></i> 8 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 5 -->
+      <a href="#" class="blog-card" data-category="acca">
+        <div class="blog-image cat-acca">
+          <div class="blog-image-icon">ACCA</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">ACCA</div>
+          <h3 class="blog-title">ACCA-ийн 13 шалгалтыг ангилан судлах эрэмбэ</h3>
+          <p class="blog-excerpt">Applied Knowledge → Applied Skills → Strategic Professional 3 түвшний шалгалтыг хэрхэн зөв дарааллаар авах вэ?</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/04/15</span>
+            <span><i class="ti ti-clock"></i> 6 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 6 -->
+      <a href="#" class="blog-card" data-category="career">
+        <div class="blog-image cat-career">
+          <div class="blog-image-icon">CV</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">Карьер</div>
+          <h3 class="blog-title">Олон улсын стандартын CV хэрхэн бичих вэ?</h3>
+          <p class="blog-excerpt">Гадаадын ажил олгогчдод тааламжтай CV бичих үндсэн зарчмууд, түгээмэл алдаа, амжилттай жишээнүүд.</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/04/08</span>
+            <span><i class="ti ti-clock"></i> 5 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 7 -->
+      <a href="#" class="blog-card" data-category="ielts">
+        <div class="blog-image cat-ielts">
+          <div class="blog-image-icon">SPK</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">IELTS · Speaking</div>
+          <h3 class="blog-title">IELTS Speaking-д 7+ оноо авах техник</h3>
+          <p class="blog-excerpt">Part 1, 2, 3 хэсэг бүрд хэрэгцээтэй strategi, fluency болон lexical resource өсгөх зөвлөгөө.</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/03/30</span>
+            <span><i class="ti ti-clock"></i> 7 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 8 -->
+      <a href="#" class="blog-card" data-category="career">
+        <div class="blog-image cat-career">
+          <div class="blog-image-icon">JOB</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">Карьер · Ярилцлага</div>
+          <h3 class="blog-title">Big 4 ярилцлагад бэлдэх 10 зөвлөгөө</h3>
+          <p class="blog-excerpt">Технологийн ярилцлагаас илүү амжилтад нөлөөлдөг soft skill, behavioral question-ыг хэрхэн зөв хариулах вэ?</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/03/22</span>
+            <span><i class="ti ti-clock"></i> 9 мин</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 9 -->
+      <a href="#" class="blog-card" data-category="cma">
+        <div class="blog-image cat-cma">
+          <div class="blog-image-icon">CMA</div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-category">CMA</div>
+          <h3 class="blog-title">CMA Part I болон Part II — аль нь хүнд вэ?</h3>
+          <p class="blog-excerpt">Олон оюутны асуудаг асуултанд туршлагатай багш нарын хариулт, бэлтгэлийн зөвлөмж.</p>
+          <div class="blog-meta">
+            <span><i class="ti ti-calendar"></i> 2026/03/15</span>
+            <span><i class="ti ti-clock"></i> 5 мин</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn" disabled>
+        <i class="ti ti-chevron-left"></i>
+      </button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span class="page-dots">...</span>
+      <button class="page-btn">5</button>
+      <button class="page-btn">
+        <i class="ti ti-chevron-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2 class="newsletter-title">
+        Шинэ нийтлэл, <span class="gold">мэдээллийн</span><br>
+        сонин хүлээн авах
+      </h2>
+      <p class="newsletter-sub">
+        Долоо хоног бүр мэргэжлийн боловсрол, карьерын зөвлөгөө имэйлээр тань хүрнэ. Хэзээ ч цуцлах боломжтой.
+      </p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Баярлалаа! Удахгүй холбоо барина.');">
+        <input type="email" class="newsletter-input" placeholder="email@example.com" required>
+        <button type="submit" class="newsletter-btn">Бүртгүүлэх</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="GAPE Academy" class="footer-brand-img"/>
+        <p class="footer-desc">
+          Global Academy of Professional Education<br>
+          Олон улсын мэргэжлийн боловсролын төв · 2016 оноос
+        </p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/GAPEAcademy" target="_blank" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.6l.4-4H14V6.3c0-1 .2-1.3 1.2-1.3H18V0h-3.8C10.6 0 9 1.6 9 4.7V8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/gape.growth/" target="_blank" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/gape.academy" target="_blank" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 110-3.5 1.8 1.8 0 010 3.5zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@gapeacademy" target="_blank" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Хөтөлбөрүүд</h4>
+        <ul>
+          <li><a href="1plus2.html">1+2 Бакалавр</a></li>
+          <li><a href="acca.html">ACCA</a></li>
+          <li><a href="cma.html">CMA</a></li>
+          <li><a href="cpa.html">CPA</a></li>
+          <li><a href="english.html">Англи хэл</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Бидний тухай</h4>
+        <ul>
+          <li><a href="index.html">GAPE-ийн түүх</a></li>
+          <li><a href="#">Багш нар</a></li>
+          <li><a href="#">Түншүүд</a></li>
+          <li><a href="blog.html">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Холбоо барих</h4>
+        <ul>
+          <li>📞 976-85457788</li>
+          <li>✉️ info@gape.education</li>
+          <li>📍 River Castle, Блок C, 6 давхар</li>
+          <li>🌐 www.gape.education</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 GAPE Academy · Бүх эрх хуулиар хамгаалагдсан</div>
+      <div>
+        <a href="#" style="margin-right: 20px;">Нууцлалын бодлого</a>
+        <a href="#">Үйлчилгээний нөхцөл</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- REGISTRATION MODAL -->
+<div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button type="button" class="modal-close" onclick="closeRegisterModal()" aria-label="Хаах">&times;</button>
+      <div class="modal-title" id="modalTitle">Үнэгүй <span class="italic">бүртгүүлэх</span></div>
+      <div class="modal-subtitle">Маягтыг бөглөөд илгээгээрэй. Манай мэргэжилтэн 24 цагийн дотор холбоо барина.</div>
+    </div>
+    <div class="modal-iframe-wrap">
+      <div class="modal-loading">Маягт ачаалж байна...</div>
+      <iframe class="modal-iframe" id="registerIframe"
+              data-src="https://forms.office.com/Pages/ResponsePage.aspx?id=IL2lL3Yu-UmAzaeL_oFZaD1nJBNHOiBGkcQgEZZzvkVUNEsyRkZWUlVDUVdIOVVKV1dWWkRIUkk1My4u&embed=true"
+              title="Бүртгэлийн форм"
+              onload="document.querySelector('.modal-loading').style.display='none'"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Modal logic
+  function openRegisterModal() {
+    const modal = document.getElementById('registerModal');
+    const iframe = document.getElementById('registerIframe');
+    const targetSrc = iframe.dataset.src;
+    if (iframe.src !== targetSrc) {
+      iframe.src = targetSrc;
+    }
+    modal.classList.add('is-open');
+    document.body.classList.add('modal-open');
+  }
+  function closeRegisterModal() {
+    document.getElementById('registerModal').classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+  }
+  document.getElementById('registerModal').addEventListener('click', function(e) {
+    if (e.target === this) closeRegisterModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeRegisterModal();
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const triggers = document.querySelectorAll('a[href="register.html"], a[href="#register"], a[href$="#register"]');
+    triggers.forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        openRegisterModal();
+      });
+    });
+  });
+
+  // Filter logic
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const category = this.dataset.category;
+      // Active state
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      // Filter cards
+      document.querySelectorAll('.blog-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
