@@ -1008,7 +1008,23 @@
       });
     });
   });
-
+ 
+// Auto-filter from URL hash (e.g. blog.html#cma)
+  function applyFilterFromHash() {
+    const hash = window.location.hash.slice(1); // remove "#"
+    if (!hash) return;
+    const btn = document.querySelector(`.filter-btn[data-category="${hash}"]`);
+    if (btn) {
+      btn.click();
+      // Scroll to filter bar
+      document.querySelector('.filter-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  // Run on page load
+  window.addEventListener('DOMContentLoaded', applyFilterFromHash);
+  // Run when hash changes (back/forward navigation)
+  window.addEventListener('hashchange', applyFilterFromHash);
+ 
   // Filter logic
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function() {
