@@ -98,6 +98,33 @@
   }
   .nav-cta:hover { background: var(--gold-lt); }
 
+  /* language toggle */
+  .nav-lang {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  .nav-lang a {
+    padding: 7px 11px;
+    color: var(--text2);
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+  }
+  .nav-lang a + a { border-left: 1px solid var(--border); }
+  .nav-lang a:hover { color: var(--navy); background: var(--bg2); }
+  .nav-lang a.active { background: var(--navy); color: #fff; }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
   /* BREADCRUMB */
   .breadcrumb {
     background: var(--bg2);
@@ -856,7 +883,13 @@
       <li><a href="blog.html">Блог</a></li>
       <li><a href="index.html#contact">Холбоо барих</a></li>
     </ul>
-    <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href="cma.html" class="active">MN</a>
+        <a href="cma-en.html">EN</a>
+      </div>
+      <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+    </div>
   </div>
 </nav>
 

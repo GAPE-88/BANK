@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACCA — Олон улсын мэргэшсэн нягтлан бодогч | GAPE Academy</title>
-<meta name="description" content="ACCA (Association of Chartered Certified Accountants) — олон улсын мэргэшсэн нягтлан бодогчийн цол. GAPE Academy нь ACCA Gold Approved Learning Partner. Танхим болон онлайн сургалт.">
-<meta name="keywords" content="ACCA, GAPE, нягтлан бодогч, олон улсын цол, Gold Approved Learning Partner">
-<meta property="og:title" content="ACCA — GAPE Academy">
-<meta property="og:description" content="Олон улсын мэргэшсэн нягтлан бодогчийн цол — GAPE-д бэлдэх боломж">
+<title>CMA® International Certification — GAPE Academy</title>
+<meta name="description" content="CMA® (Certified Management Accountant) — an international certification for management accountants. Study at GAPE Academy, a Becker partner and IMA Silver Course Provider.">
+<meta name="keywords" content="CMA, Certified Management Accountant, GAPE, accountant, international qualification, Becker, IMA">
+<meta property="og:title" content="CMA® International Certification — GAPE Academy">
+<meta property="og:description" content="Study at home and take your finance career to the next level">
 <meta property="og:image" content="assets/logo.png">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
@@ -30,7 +30,6 @@
     --purple: #6b4a8b;
     --purple-bg: #ede5f5;
     --orange: #d97706;
-    --red: #c0392b;
     --bg: #ffffff;
     --bg2: #f5f7fa;
     --bg3: #eef1f8;
@@ -201,7 +200,7 @@
     color: #b8c5d8;
     line-height: 1.65;
     margin: 0 auto 28px;
-    max-width: 720px;
+    max-width: 700px;
     font-weight: 300;
   }
   .hero-sub strong { color: #fff; font-weight: 500; }
@@ -333,7 +332,7 @@
     line-height: 1.7;
   }
 
-  /* WHY 4 features */
+  /* WHY 4 REASONS (top features) */
   .whys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -377,186 +376,14 @@
     line-height: 1.55;
   }
 
-  /* 2 FORMATS (Танхим / Онлайн) */
-  .formats {
+  /* CURRICULUM (3 phase) */
+  .curriculum {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-  .format {
-    background: #fff;
-    border-radius: 24px;
-    padding: 40px 36px;
-    border: 2px solid var(--border);
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .format::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 5px;
-  }
-  .format-classroom::before { background: linear-gradient(90deg, var(--navy), var(--blue)); }
-  .format-online::before { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); }
-  .format:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 50px rgba(10, 37, 64, 0.12);
-  }
-  .format-classroom:hover { border-color: var(--blue); }
-  .format-online:hover { border-color: var(--gold); }
-
-  .format-icon {
-    width: 72px; height: 72px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  .format-classroom .format-icon { background: linear-gradient(135deg, var(--navy), var(--blue)); }
-  .format-online .format-icon { background: linear-gradient(135deg, var(--gold), var(--gold-lt)); color: var(--navy); }
-
-  .format-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-    line-height: 1.1;
-  }
-  .format-subtitle {
-    font-size: 13px;
-    color: var(--gold-dk);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 18px;
-  }
-  .format-desc {
-    font-size: 15px;
-    color: var(--text2);
-    line-height: 1.65;
-    margin-bottom: 24px;
-  }
-  .format-list {
-    list-style: none;
-  }
-  .format-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 0;
-    font-size: 14px;
-    color: var(--text1);
-    line-height: 1.5;
-    border-bottom: 1px dashed var(--border);
-  }
-  .format-list li:last-child { border-bottom: none; }
-  .format-list li svg { flex-shrink: 0; margin-top: 3px; }
-  .format-classroom .format-list li svg { color: var(--blue); }
-  .format-online .format-list li svg { color: var(--gold-dk); }
-
-  /* EXAM CYCLE */
-  .cycle {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .cycle-month {
-    background: #fff;
-    border: 2px solid var(--border);
-    border-radius: 18px;
-    padding: 28px 20px;
-    text-align: center;
-    position: relative;
-    transition: all 0.3s;
-  }
-  .cycle-month:hover {
-    transform: translateY(-4px);
-    border-color: var(--gold);
-    box-shadow: 0 12px 28px rgba(10, 37, 64, 0.08);
-  }
-  .cycle-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 56px;
-    font-weight: 700;
-    color: var(--gold-dk);
-    line-height: 1;
-    letter-spacing: -1px;
-    margin-bottom: 4px;
-  }
-  .cycle-month-label {
-    font-size: 11px;
-    color: var(--text3);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-    font-weight: 600;
-  }
-  .cycle-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-  }
-  .cycle-prep {
-    font-size: 12px;
-    color: var(--text2);
-    line-height: 1.4;
-  }
-
-  .timeline-info {
-    max-width: 800px;
-    margin: 50px auto 0;
-    background: linear-gradient(135deg, #fff 0%, var(--gold-bg) 100%);
-    border: 2px solid var(--gold);
-    border-radius: 20px;
-    padding: 32px 40px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  .timeline-icon {
-    width: 64px; height: 64px;
-    flex-shrink: 0;
-    background: linear-gradient(135deg, var(--gold), var(--gold-lt));
-    color: var(--navy);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .timeline-text {
-    flex: 1;
-  }
-  .timeline-text h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    color: var(--navy);
-    margin-bottom: 6px;
-    font-weight: 700;
-  }
-  .timeline-text h3 .italic { font-style: italic; color: var(--gold-dk); }
-  .timeline-text p {
-    font-size: 14px;
-    color: var(--text2);
-    line-height: 1.6;
-  }
-
-  /* 3 LEVELS */
-  .levels {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     position: relative;
   }
-  .levels::before {
+  .curriculum::before {
     content: '';
     position: absolute;
     top: 60px;
@@ -566,22 +393,21 @@
     background: repeating-linear-gradient(90deg, var(--gold) 0 8px, transparent 8px 16px);
     z-index: 0;
   }
-  .level {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+  .cur-card {
+    background: #fff;
     border-radius: 20px;
-    padding: 36px 30px;
+    padding: 32px 28px;
+    border: 1.5px solid var(--border);
     position: relative;
     z-index: 1;
-    backdrop-filter: blur(8px);
     transition: all 0.3s;
   }
-  .level:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--gold);
+  .cur-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.1);
+    border-color: var(--gold);
   }
-  .level-num {
+  .cur-num {
     width: 56px; height: 56px;
     border-radius: 50%;
     margin: 0 auto 18px;
@@ -589,50 +415,195 @@
     align-items: center;
     justify-content: center;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--navy);
-    background: linear-gradient(135deg, var(--gold), var(--gold-lt));
-    box-shadow: 0 6px 16px rgba(201, 168, 76, 0.4);
-  }
-  .level-tag {
-    text-align: center;
-    font-size: 10px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--gold-lt);
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  .level-title {
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 8px;
+    box-shadow: 0 6px 16px rgba(10, 37, 64, 0.18);
+  }
+  .cur-card:nth-child(1) .cur-num { background: linear-gradient(135deg, var(--green) 0%, #5fa848 100%); }
+  .cur-card:nth-child(2) .cur-num { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 100%); }
+  .cur-card:nth-child(3) .cur-num { background: linear-gradient(135deg, var(--purple) 0%, #8b6cae 100%); }
+
+  .cur-roman {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold-dk);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .cur-date {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
     line-height: 1.2;
   }
-  .level-count {
+  .cur-duration {
     text-align: center;
     display: inline-block;
     font-size: 11px;
-    background: rgba(201, 168, 76, 0.2);
-    color: var(--gold-lt);
+    background: var(--gold-bg);
+    color: var(--gold-dk);
     padding: 4px 12px;
     border-radius: 20px;
+    margin: 0 auto 22px;
     font-weight: 600;
     letter-spacing: 0.5px;
   }
-  .level-count-wrapper {
+  .cur-duration-wrapper {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
-  .level-desc {
-    font-size: 13px;
-    color: #b8c5d8;
+  .cur-list {
+    list-style: none;
+  }
+  .cur-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--text1);
+    line-height: 1.5;
+  }
+  .cur-list li svg { flex-shrink: 0; margin-top: 3px; }
+  .cur-card:nth-child(1) .cur-list li svg { color: var(--green); }
+  .cur-card:nth-child(2) .cur-list li svg { color: var(--blue); }
+  .cur-card:nth-child(3) .cur-list li svg { color: var(--purple); }
+  .cur-list li strong { color: var(--navy); font-weight: 600; }
+
+  /* SCHEDULE info */
+  .schedule {
+    background: linear-gradient(135deg, #fff 0%, var(--gold-bg) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 24px;
+    padding: 40px 48px;
+    max-width: 900px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .schedule-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .schedule-title .italic { font-style: italic; color: var(--gold-dk); }
+  .schedule-desc {
+    font-size: 14px;
+    color: var(--text2);
     line-height: 1.6;
+    margin-bottom: 4px;
+  }
+  .schedule-times {
+    display: grid;
+    gap: 14px;
+  }
+  .sch-time {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 12px;
+    border-left: 4px solid var(--gold);
+  }
+  .sch-icon {
+    width: 36px; height: 36px;
+    background: var(--navy);
+    color: var(--gold-lt);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .sch-day {
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 15px;
+  }
+  .sch-hour {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 2px;
+  }
+
+  /* SKILLS GRID (10 areas from brochure) */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  .skill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 22px 16px;
     text-align: center;
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  .skill:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .skill-ico {
+    width: 44px; height: 44px;
+    margin: 0 auto 12px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+
+  /* INCLUDED IN PROGRAM */
+  .included-block {
+    background: #fff;
+    border-radius: 24px;
+    padding: 48px 52px;
+    border: 1px solid var(--border);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+  }
+  .included-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 15px;
+    color: var(--text1);
+    border-bottom: 1px dashed var(--border);
+  }
+  .included-item:last-child, .included-item:nth-last-child(2) { border-bottom: none; }
+  .included-item svg {
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 3px;
   }
 
   /* CTA */
@@ -688,8 +659,8 @@
     border: 1px solid rgba(255,255,255,0.2);
   }
   .btn-ghost-light:hover { background: rgba(255,255,255,0.15); }
-
-  /* FOOTER */
+   
+   /* FOOTER */
   .footer {
     background: var(--navy-2);
     color: #b8c5d8;
@@ -761,16 +732,16 @@
     font-size: 12px;
     color: #8fa3c0;
   }
-
+ 
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .hero-title { font-size: 64px; }
+    .curriculum { grid-template-columns: 1fr; }
+    .curriculum::before { display: none; }
     .whys { grid-template-columns: repeat(2, 1fr); }
-    .formats { grid-template-columns: 1fr; }
-    .cycle { grid-template-columns: repeat(2, 1fr); }
-    .levels { grid-template-columns: 1fr; }
-    .levels::before { display: none; }
-    .timeline-info { flex-direction: column; text-align: center; }
+    .skills { grid-template-columns: repeat(2, 1fr); }
+    .schedule { grid-template-columns: 1fr; }
+    .included-grid { grid-template-columns: 1fr; }
     .section-title { font-size: 38px; }
     .nav-menu { display: none; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -781,7 +752,7 @@
     .hero { padding: 60px 0 70px; }
     .hero-title { font-size: 44px; }
     .section { padding: 60px 0; }
-    .whys, .cycle { grid-template-columns: 1fr; }
+    .whys, .skills { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
   }
  /* ════════════ REGISTRATION MODAL ════════════ */
@@ -902,22 +873,22 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="nav-logo">
+    <a href="index-en.html" class="nav-logo">
       <img src="assets/logo.png" alt="GAPE Academy" class="nav-logo-full"/>
     </a>
     <ul class="nav-menu">
-      <li><a href="index.html#programs" class="active">Хөтөлбөрүүд</a></li>
-      <li><a href="english.html">Англи хэл</a></li>
-      <li><a href="index.html">Тухай</a></li>
-      <li><a href="blog.html">Блог</a></li>
-      <li><a href="index.html#contact">Холбоо барих</a></li>
+      <li><a href="index-en.html#programs" class="active">Programs</a></li>
+      <li><a href="english-en.html">English</a></li>
+      <li><a href="index-en.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index-en.html#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
       <div class="nav-lang">
-        <a href="acca.html" class="active">MN</a>
-        <a href="acca-en.html">EN</a>
+        <a href="cma-en.html">MN</a>
+        <a href="cma-en.html" class="active">EN</a>
       </div>
-      <a href="#register" class="nav-cta">Бүртгүүлэх</a>
+      <a href="#register" class="nav-cta">Register</a>
     </div>
   </div>
 </nav>
@@ -925,11 +896,11 @@
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="index.html">Нүүр</a>
+    <a href="index-en.html">Home</a>
     <span class="sep">/</span>
-    <a href="index.html#programs">Хөтөлбөрүүд</a>
+    <a href="index-en.html#programs">Programs</a>
     <span class="sep">/</span>
-    <span class="current">ACCA — Олон улсын мэргэшсэн нягтлан бодогч</span>
+    <span class="current">CMA® International Certification</span>
   </div>
 </div>
 
@@ -938,15 +909,16 @@
   <div class="hero-grid"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-eyebrow">◆ Олон улсын мэргэжлийн цол ◆</div>
-      <div class="hero-tag">Дэлхий нийтэд хүлээн зөвшөөрөгдсөн,</div>
-      <h1 class="hero-title">ACCA — <span class="gold">Chartered</span><br>Accountant</h1>
+      <div class="hero-eyebrow">◆ International professional qualification ◆</div>
+      <div class="hero-tag">Study at home,<span style="color: #ffffff;"> get recognized internationally</span></div>
+      <h1 class="hero-title">CMA® <span class="gold">International</span><br>Certification</h1>
       <p class="hero-sub">
-        <strong>Association of Chartered Certified Accountants</strong> — нягтлан бодох бүртгэл, санхүүгийн салбарт дэлхийн нэр хүндтэй мэргэжлийн цол. GAPE Academy нь <strong>ACCA Gold Approved Learning Partner</strong> юм.
+        <strong>Certified Management Accountant</strong> — a real opportunity to become an internationally qualified management accountant. Take your finance career to the next level.
       </p>
       <div class="partner-row">
-        <div class="label">◆ Албан ёсны статус</div>
-        <div class="partner">ACCA<span>Gold Approved Learning Partner</span></div>
+        <div class="label">◆ Official partner</div>
+        <div class="partner">Becker<span>+</span></div>
+        <div class="partner">IMA<span>Silver Course Provider</span></div>
       </div>
     </div>
   </div>
@@ -957,32 +929,32 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat">
-        <div class="stat-n">13</div>
-        <div class="stat-l">Шалгалт<br>3 түвшний</div>
+        <div class="stat-n">2</div>
+        <div class="stat-l">Exams<br>Part I & II</div>
       </div>
       <div class="stat">
-        <div class="stat-n">4</div>
-        <div class="stat-l">Удаа жилд<br>Шалгалт болдог</div>
-      </div>
-      <div class="stat">
-        <div class="stat-n">180<span class="small">+</span></div>
-        <div class="stat-l">Улсад<br>хүлээн зөвшөөрөгддөг</div>
+        <div class="stat-n">12<span class="small">–18</span></div>
+        <div class="stat-l">Months<br>program length</div>
       </div>
       <div class="stat">
         <div class="stat-n">2</div>
-        <div class="stat-l">Сургалтын<br>хэлбэр</div>
+        <div class="stat-l">Times<br>a week in class</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">24<span class="small">/7</span></div>
+        <div class="stat-l">Becker online<br>system</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY ACCA (4 features) -->
+<!-- WHY CMA (4 features) -->
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Яагаад ACCA</div>
-      <h2 class="section-title">Яагаад ACCA <span class="italic">гэж?</span></h2>
-      <p class="section-sub">Их Британийн ACCA байгууллагаас олгодог дэлхийн нэр хүндтэй санхүүгийн мэргэшил</p>
+      <div class="section-tag">Why CMA®</div>
+      <h2 class="section-title">Why <span class="italic">CMA®?</span></h2>
+      <p class="section-sub">A globally recognized certification awarded by the Institute of Management Accountants (IMA)</p>
     </div>
 
     <div class="whys">
@@ -993,18 +965,19 @@
             <path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>
           </svg>
         </div>
-        <h3 class="why-title">180+ улсад<br>хүлээн зөвшөөрөгддөг</h3>
-        <p class="why-desc">Дэлхийн хаана ч ажиллах боломжтой мэргэжлийн цол</p>
+        <h3 class="why-title">Recognized<br>internationally</h3>
+        <p class="why-desc">An official certification valid in 180+ countries worldwide</p>
       </div>
       <div class="why">
         <div class="why-ico">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="9" r="6"/>
-            <path d="M9 14l-2 7 5-3 5 3-2-7"/>
+            <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1"/>
+            <path d="M9 12l2 2 4-4"/>
           </svg>
         </div>
-        <h3 class="why-title">Big 4 компаниудад<br>урих чадвар</h3>
-        <p class="why-desc">Deloitte, EY, KPMG, PwC — дэлхийн топ аудит фирмүүд</p>
+        <h3 class="why-title">CFO-level<br>career opportunities</h3>
+        <p class="why-desc">The shortest path to becoming a finance leader</p>
       </div>
       <div class="why">
         <div class="why-ico">
@@ -1013,208 +986,285 @@
             <path d="M14 7h7v7"/>
           </svg>
         </div>
-        <h3 class="why-title">Карьерын<br>тогтвортой өсөлт</h3>
-        <p class="why-desc">CFO, Аудитор, Санхүүгийн захирал болох замнал</p>
+        <h3 class="why-title">30%+ salary<br>potential</h3>
+        <p class="why-desc">A salary increase backed by international research</p>
       </div>
       <div class="why">
         <div class="why-ico">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            <circle cx="12" cy="9" r="6"/>
+            <path d="M9 14l-2 7 5-3 5 3-2-7"/>
           </svg>
         </div>
-        <h3 class="why-title">Gold Approved<br>Learning Partner</h3>
-        <p class="why-desc">GAPE нь ACCA-н албан ёсны гэрчилгээтэй сургалтын төв</p>
+        <h3 class="why-title">Backed by the<br>reputation of IMA</h3>
+        <p class="why-desc">A world-leading professional association</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2 FORMATS -->
+<!-- CURRICULUM Part I -->
 <section class="section section-paper">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Сургалтын хэлбэр</div>
-      <h2 class="section-title">2 <span class="italic">сонголт</span> — Танхим эсвэл Онлайн</h2>
-      <p class="section-sub">Өөрийн боломж, цаг хугацаандаа тохирох сургалтын хэлбэрийг сонгох боломжтой</p>
+      <div class="section-tag">CMA Part I course</div>
+      <h2 class="section-title">Course <span class="italic">schedule</span></h2>
+      <p class="section-sub">A 3-stage system to prepare for the Part I exam</p>
     </div>
 
-    <div class="formats">
+    <div class="curriculum">
 
-      <!-- Танхим -->
-      <div class="format format-classroom">
-        <div class="format-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 12h.01M9 15h.01M9 18h.01M13 9h.01M13 12h.01M13 15h.01M13 18h.01"/>
-          </svg>
-        </div>
-        <div class="format-subtitle">Хувилбар 1</div>
-        <div class="format-title">Танхимын сургалт</div>
-        <p class="format-desc">
-          Багштай нүүр тулсан, ангид суралцах сонгодог хэлбэр. Бусад оюутнуудтай хамт суралцаж, шууд харилцаж асуулт хариулт өгөх боломжтой.
-        </p>
-        <ul class="format-list">
+      <div class="cur-card">
+        <div class="cur-num">1</div>
+        <div class="cur-roman">Part I</div>
+        <div class="cur-date">Jun 2 —<br>Jul 5</div>
+        <div class="cur-duration-wrapper"><span class="cur-duration">5 weeks</span></div>
+        <ul class="cur-list">
           <li>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Багштай нүүр тулсан хичээл
+            <span><strong>Unit 1</strong> — External Financial Reporting Decisions</span>
           </li>
           <li>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Бусад оюутантай хамтран суралцах
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Шууд асуулт хариулт өгөх
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            River Castle байрнаа, тав тухтай орчин
+            <span><strong>Unit 2</strong> — Cost Management</span>
           </li>
         </ul>
       </div>
 
-      <!-- Онлайн -->
-      <div class="format format-online">
-        <div class="format-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2"/>
-            <path d="M8 21h8M12 17v4"/>
-          </svg>
-        </div>
-        <div class="format-subtitle">Хувилбар 2</div>
-        <div class="format-title">Онлайн сургалт</div>
-        <p class="format-desc">
-          Хаанаас ч, хэдийд ч суралцах боломжтой уян хатан хэлбэр. Ажил, эрдэм хослуулах хүсэлтэй оюутнуудад тохиромжтой.
-        </p>
-        <ul class="format-list">
+      <div class="cur-card">
+        <div class="cur-num">2</div>
+        <div class="cur-roman">Part II</div>
+        <div class="cur-date">Aug 3 —<br>Sep 26</div>
+        <div class="cur-duration-wrapper"><span class="cur-duration">8 weeks</span></div>
+        <ul class="cur-list">
           <li>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Уян хатан цагийн хуваарь
+            <span><strong>Unit 3</strong> — Planning, Budgeting & Forecasting</span>
           </li>
           <li>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Хаанаас ч суралцах боломжтой
+            <span><strong>Unit 4</strong> — Performance Management</span>
           </li>
           <li>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Видео хичээлийг олон удаа үзэх
+            <span><strong>Unit 5</strong> — Internal Controls</span>
           </li>
           <li>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Ажил, эрдэм хослуулах боломжтой
+            <span><strong>Unit 6</strong> — Technology & Analytics</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cur-card">
+        <div class="cur-num">3</div>
+        <div class="cur-roman">Part III</div>
+        <div class="cur-date">Sep 29 —<br>Oct 17</div>
+        <div class="cur-duration-wrapper"><span class="cur-duration">3 weeks</span></div>
+        <ul class="cur-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Simulated exam 1</strong></span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Revision and review</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span><strong>Simulated exam 2</strong></span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Review and revision</span>
           </li>
         </ul>
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- EXAM CYCLE -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Шалгалтын хуваарь</div>
-      <h2 class="section-title">Шалгалт <span class="italic">жилд 4 удаа</span></h2>
-      <p class="section-sub">ACCA шалгалт жилийн 4 удаа болдог. GAPE нь шалгалтын өмнө ~3 сар хичээллэн бэлтгэдэг.</p>
-    </div>
-
-    <div class="cycle">
-      <div class="cycle-month">
-        <div class="cycle-num">3</div>
-        <div class="cycle-month-label">Сар</div>
-        <div class="cycle-name">March</div>
-        <div class="cycle-prep">Хавар цикл</div>
+    <!-- Schedule highlight -->
+    <div class="schedule">
+      <div>
+        <div class="schedule-title">Class <span class="italic">times</span></div>
+        <p class="schedule-desc">Twice a week · a blend of online and on-campus study. A flexible schedule that fits around work.</p>
       </div>
-      <div class="cycle-month">
-        <div class="cycle-num">6</div>
-        <div class="cycle-month-label">Сар</div>
-        <div class="cycle-name">June</div>
-        <div class="cycle-prep">Зуны цикл</div>
-      </div>
-      <div class="cycle-month">
-        <div class="cycle-num">9</div>
-        <div class="cycle-month-label">Сар</div>
-        <div class="cycle-name">September</div>
-        <div class="cycle-prep">Намрын цикл</div>
-      </div>
-      <div class="cycle-month">
-        <div class="cycle-num">12</div>
-        <div class="cycle-month-label">Сар</div>
-        <div class="cycle-name">December</div>
-        <div class="cycle-prep">Өвлийн цикл</div>
-      </div>
-    </div>
-
-    <div class="timeline-info">
-      <div class="timeline-icon">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M12 7v5l3 3"/>
-        </svg>
-      </div>
-      <div class="timeline-text">
-        <h3>Шалгалтын өмнөх <span class="italic">3 сар</span> бэлтгэх</h3>
-        <p>Шалгалт болохоос ~3 сарын өмнө GAPE-н танхимын сургалт эхэлдэг. Энэ хугацаанд бүх материалыг дамжуулж, simulated exam-аар бэлтгэдэг.</p>
+      <div class="schedule-times">
+        <div class="sch-time">
+          <div class="sch-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="sch-day">Tuesday</div>
+            <div class="sch-hour">18:30 – 21:00</div>
+          </div>
+        </div>
+        <div class="sch-time">
+          <div class="sch-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <div>
+            <div class="sch-day">Saturday</div>
+            <div class="sch-hour">08:30 – 12:30</div>
+          </div>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- 3 LEVELS -->
+<!-- SKILLS (10 competency areas) -->
 <section class="section section-navy">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Хөтөлбөрийн бүтэц</div>
-      <h2 class="section-title">3 <span class="italic">түвшин</span> · 13 шалгалт</h2>
-      <p class="section-sub">ACCA-н сургалт нь 3 үе шаттай бүтэцтэй — Applied Knowledge → Applied Skills → Strategic Professional</p>
+      <div class="section-tag">Skills framework</div>
+      <h2 class="section-title">Skills that <span class="italic">amplify</span> your impact</h2>
+      <p class="section-sub">The updated skills framework released by the Institute of Management Accountants</p>
     </div>
 
-    <div class="levels">
-
-      <div class="level">
-        <div class="level-num">I</div>
-        <div class="level-tag">Эхний түвшин</div>
-        <div class="level-title">Applied<br>Knowledge</div>
-        <div class="level-count-wrapper"><span class="level-count">3 шалгалт</span></div>
-        <p class="level-desc">Нягтлан бодох бүртгэл, бизнес, менежментийн үндсэн ойлголтуудыг эзэмшинэ.</p>
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="skill-name">Strategy, Planning & Performance</div>
       </div>
-
-      <div class="level">
-        <div class="level-num">II</div>
-        <div class="level-tag">Дунд түвшин</div>
-        <div class="level-title">Applied<br>Skills</div>
-        <div class="level-count-wrapper"><span class="level-count">6 шалгалт</span></div>
-        <p class="level-desc">Аудит, татвар, санхүү, гүйцэтгэлийн удирдлагын мэргэжлийн ур чадварыг хөгжүүлнэ.</p>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+        </div>
+        <div class="skill-name">Reporting & Control</div>
       </div>
-
-      <div class="level">
-        <div class="level-num">III</div>
-        <div class="level-tag">Дээд түвшин</div>
-        <div class="level-title">Strategic<br>Professional</div>
-        <div class="level-count-wrapper"><span class="level-count">4 шалгалт</span></div>
-        <p class="level-desc">Стратегийн санхүү, удирдлага, бизнес шинжилгээний өндөр түвшний мэргэшил.</p>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="skill-name">Data Analytics & Insights</div>
       </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <div class="skill-name">Cybersecurity & Data Privacy</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33h.01a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.01a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </div>
+        <div class="skill-name">Digital Transformation & Innovation</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c0-5 4-9 10-9s10 4 10 9"/><path d="M12 13a5 5 0 100-10 5 5 0 000 10z"/></svg>
+        </div>
+        <div class="skill-name">Sustainable Business & Governance</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2"/></svg>
+        </div>
+        <div class="skill-name">Leadership</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7a2 2 0 00-2-2H5a2 2 0 00-2 2v13a2 2 0 002 2h6"/><path d="M16 3v4M8 3v4M3 11h18M14 18l3 3 5-5"/></svg>
+        </div>
+        <div class="skill-name">Professional Ethics & Values</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="skill-name">Business Acumen & Operations</div>
+      </div>
+      <div class="skill">
+        <div class="skill-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <div class="skill-name">Emerging Technologies in Accounting</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- WHAT'S INCLUDED -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">What's included</div>
+      <h2 class="section-title">Everything <span class="italic">included</span></h2>
+      <p class="section-sub">Beyond the tuition, all official fees, materials and exam costs are included</p>
+    </div>
+
+    <div class="included-block">
+      <div class="included-grid">
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>On-campus prep course for the CMA Part 1 exam</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Official textbooks</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>On-campus prep course for the CMA Part 2 exam</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>First-year IMA membership fee</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span><strong>Becker CMA Review</strong> — 24/7 online system</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>CMA entrance fee</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Course materials</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Fees for both CMA exams</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>A modern learning environment</span>
+        </div>
+        <div class="included-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          <span>Experienced professional tutors</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="section section-navy" id="register" style="padding-top: 0;">
+<section class="section section-navy" id="register">
   <div class="container">
     <div class="cta">
-      <div class="hero-tag" style="color: var(--gold-lt);">Олон улсын карьерын төлөө,</div>
+      <div class="hero-tag" style="color: var(--gold-lt);">For a stronger future,</div>
       <h2 class="cta-title">
-        ACCA-аар <span class="gold">эхэлье</span>
+        <span class="gold">Register</span> today<br>
+        and grow your career
       </h2>
       <p class="cta-sub">
-        Үнэгүй зөвлөгөө аваад, ACCA хөтөлбөрийн талаар дэлгэрэнгүй мэдээлэл аваарай. Танхим, онлайн сонголтоосоо өөрт тохирохыг сонгох боломжтой.
+        Get a free consultation and learn more about the CMA® program. Our advisors are ready to answer your questions.
       </p>
       <div class="cta-buttons">
         <a href="#register" class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>
-          Үнэгүй бүртгүүлэх
+          Register for free
         </a>
         <a href="tel:+97685457788" class="btn btn-ghost-light">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
@@ -1234,7 +1284,7 @@
         <img src="assets/logo.png" alt="GAPE Academy" style="height: 60px; width: auto; margin-bottom: 18px; filter: brightness(1.1);" />
         <p class="footer-desc">
           Global Academy of Professional Education<br>
-          Олон улсын мэргэжлийн боловсролын төв · 2016 оноос
+          International Professional Education Center · Since 2016
         </p>
         <div class="footer-social">
           <a href="https://www.facebook.com/GAPEAcademy"target="_blank" aria-label="Facebook">
@@ -1253,60 +1303,61 @@
       </div>
 
       <div class="footer-col">
-        <h4>Хөтөлбөрүүд</h4>
+        <h4>Programs</h4>
         <ul>
-          <li><a href="1plus2.html">1+2 Бакалавр</a></li>
-          <li><a href="acca.html">ACCA</a></li>
-          <li><a href="cma.html">CMA</a></li>
-          <li><a href="cpa.html">CPA</a></li>
-          <li><a href="english.html">IELTS · General · Business</a></li>
+          <li><a href="1plus2-en.html">1+2 Bachelor's</a></li>
+          <li><a href="acca-en.html">ACCA</a></li>
+          <li><a href="cma-en.html">CMA</a></li>
+          <li><a href="cpa-en.html">CPA</a></li>
+          <li><a href="english-en.html">IELTS · General · Business</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Бидний тухай</h4>
+        <h4>About us</h4>
         <ul>
-          <li><a href="#">GAPE-ийн түүх</a></li>
-          <li><a href="#">Багш нар</a></li>
-          <li><a href="#">Түншүүд</a></li>
-          <li><a href="blog.html">Блог</a></li>
+          <li><a href="#">Our story</a></li>
+          <li><a href="#">Tutors</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Холбоо барих</h4>
+        <h4>Contact</h4>
         <ul>
           <li><i class="ti ti-phone" style="font-size:14px;margin-right:6px;"></i> 976-85457788</li>
           <li><i class="ti ti-mail" style="font-size:14px;margin-right:6px;"></i> info@gape.education</li>
-          <li><i class="ti ti-map-pin" style="font-size:14px;margin-right:6px;"></i> River Castle, Блок C, 6 давхар</li>
+          <li><i class="ti ti-map-pin" style="font-size:14px;margin-right:6px;"></i> River Castle, Block C, 6th floor</li>
           <li><i class="ti ti-world" style="font-size:14px;margin-right:6px;"></i> www.gape.education</li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div>© 2026 GAPE Academy · Бүх эрх хуулиар хамгаалагдсан</div>
+      <div>© 2026 GAPE Academy · All rights reserved</div>
       <div>
-        <a href="#" style="margin-right: 20px;">Нууцлалын бодлого</a>
-        <a href="#">Үйлчилгээний нөхцөл</a>
+        <a href="#" style="margin-right: 20px;">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
 
   </div>
 </footer>
+
 <!-- ════════════ REGISTRATION MODAL ════════════ -->
 <div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal-box">
     <div class="modal-header">
-      <button type="button" class="modal-close" onclick="closeRegisterModal()" aria-label="Хаах">&times;</button>
-      <div class="modal-title" id="modalTitle">Үнэгүй <span class="italic">бүртгүүлэх</span></div>
-      <div class="modal-subtitle">Маягтыг бөглөөд илгээгээрэй. Манай мэргэжилтэн 24 цагийн дотор холбоо барина.</div>
+      <button type="button" class="modal-close" onclick="closeRegisterModal()" aria-label="Close">&times;</button>
+      <div class="modal-title" id="modalTitle">Register <span class="italic">for free</span></div>
+      <div class="modal-subtitle">Fill in the form and submit. Our advisor will contact you within 24 hours.</div>
     </div>
     <div class="modal-iframe-wrap">
-      <div class="modal-loading">Маягт ачаалж байна...</div>
+      <div class="modal-loading">Loading form...</div>
       <iframe class="modal-iframe" id="registerIframe"
               data-src="https://forms.office.com/Pages/ResponsePage.aspx?id=IL2lL3Yu-UmAzaeL_oFZaD1nJBNHOiBGkcQgEZZzvkVUNEsyRkZWUlVDUVdIOVVKV1dWWkRIUkk1My4u&embed=true"
-              title="Бүртгэлийн форм"
+              title="Registration form"
               onload="document.querySelector('.modal-loading').style.display='none'"></iframe>
     </div>
   </div>
